@@ -1,0 +1,54 @@
+/*ELIMINA SE ESISTE E CREA DATABASE*/
+DROP DATABASE IF EXISTS `dbwebsite`;
+CREATE DATABASE `dbwebsite`;
+USE `dbwebsite`;
+
+/*CREA TABELLE*/
+CREATE TABLE `user`
+(
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `email` varchar(50) NOT NULL,
+    `username` varchar(30) NOT NULL,
+    `password` varchar(16) NOT NULL,
+    `datesignup` DATE NOT NULL DEFAULT CURRENT_DATE,
+    PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+CREATE TABLE `category`
+(
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(30) NOT NULL,
+    PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+
+CREATE TABLE `product`
+(
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(30) NOT NULL,
+    `description` text NOT NULL,
+    `iduser` int(11) NOT NULL,
+    `idcategory` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`iduser`) REFERENCES `user`(`id`),
+    FOREIGN KEY (`idcategory`) REFERENCES `category`(`id`)
+    
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+/*INSERIMENTO DEI VALORI RANDOM*/
+INSERT INTO `user`(`email`, `username`,`password`) VALUES
+("gio@gmail.com", "gio", "1234"),
+("tizio@gmail.com", "tizio", "1234"),
+("caio@gmail.com", "caio", "1234");
+
+INSERT INTO `category`(`name`) VALUES
+("categoria1"),
+("categoria2"),
+("categoria3");
+
+INSERT INTO `product`(`name`, `description`,`iduser`, `idcategory`) VALUES
+("prodotto1", "Questa è la descrizione del prodotto 1", 1, 1),
+("prodotto2", "Questa è la descrizione del prodotto 2", 2, 2),
+("prodotto3", "Questa è la descrizione del prodotto 3", 1, 3);
