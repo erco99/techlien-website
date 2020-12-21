@@ -19,11 +19,12 @@ class DatabaseHelper{
     }
 
     public function createUser($email, $username, $password){
-        $stmt = $this->db->prepare("INSERT INTO `user`(`email`, `username`,`password`) VALUES
-                                                                    (?, ?, ?)");
+        $stmt = $this->db->prepare("INSERT INTO `user`(`email`, `username`,`password`)
+                                                                          VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $email, $username, $password);
         $stmt->execute();
         $stmt->close();
     }
+  }
 
 ?>
