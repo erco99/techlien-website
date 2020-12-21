@@ -22,7 +22,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row visible-xs">
+            <div class="row row-full-height visible-xs">
                 <div class="col-xs-2">
                     <div class="dropdown">
                         <button button class="btn btn-outline-dark dropdown-toggle" type="button" 
@@ -36,11 +36,15 @@
                           </ul>
                     </div>
                 </div>
-                <div class="col-xs-6"><h1>WEBSITE</h1></div> 
-                <div class="col-xs-2">
-                    <img src="img/icons/enter.png" alt="login" class="img-rounded">
+                <div class="col-xs-6">
+                    <img src="img/icons/logo.svg" alt="login" class="responsive-img">
+                </div> 
+                <div class="col-xs-2">  
+                    <img src="img/icons/login.svg" alt="login" class="icon-size">
                 </div>
-                <div class="col-xs-2"><h4>ciao</h4></div>
+                <div class="col-xs-2">
+                    <img src="img/icons/cart.svg" alt="login" class="icon-size">
+                </div>
             </div>
 
         </div>
