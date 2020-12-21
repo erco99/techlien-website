@@ -5,11 +5,11 @@ function compareEmail(){
     $('#repeatEmailHelp').text('Email coincidono');
     document.getElementById('repeatEmailHelp').style.color = 'green';
 
-   }
-   else{
-     $('#repeatEmailHelp').text('Email non coincidono');
-     document.getElementById('repeatEmailHelp').style.color = 'red';
-   }
+  }
+  else{
+    $('#repeatEmailHelp').text('Email non coincidono');
+    document.getElementById('repeatEmailHelp').style.color = 'red';
+  }
 }
 
 function comparePassword(){
@@ -19,9 +19,9 @@ function comparePassword(){
     $('#repeatPasswordHelp').text('Le password coincidono');
     document.getElementById('repeatPasswordHelp').style.color = 'green';
 
-   }
-   else{
-     $('#repeatPasswordHelp').text('Le password non coincidono');
-     document.getElementById('repeatPasswordHelp').style.color = 'red';
-   }
+  }
+  else{
+    $('#repeatPasswordHelp').text('Le password non coincidono');
+    document.getElementById('repeatPasswordHelp').style.color = 'red';
+  }
 }

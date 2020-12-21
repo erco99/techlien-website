@@ -8,8 +8,11 @@ CREATE TABLE `user`
 (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `email` varchar(50) NOT NULL,
+    `firstName` varchar(50) NOT NULL,
+    `lastName` varchar(50) NOT NULL,
     `username` varchar(30) NOT NULL,
     `password` varchar(16) NOT NULL,
+    `token` int(11) NOT NULL,
     `datesignup` DATE NOT NULL DEFAULT CURRENT_DATE,
     PRIMARY KEY (`id`)
 
@@ -34,14 +37,14 @@ CREATE TABLE `product`
     PRIMARY KEY (`id`),
     FOREIGN KEY (`iduser`) REFERENCES `user`(`id`),
     FOREIGN KEY (`idcategory`) REFERENCES `category`(`id`)
-    
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 /*INSERIMENTO DEI VALORI RANDOM*/
-INSERT INTO `user`(`email`, `username`,`password`) VALUES
-("gio@gmail.com", "gio", "1234"),
-("tizio@gmail.com", "tizio", "1234"),
-("caio@gmail.com", "caio", "1234");
+INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`,`password`, `token`) VALUES
+("Giovanni", "Messina", "gio@gmail.com", "gio", "1234", 0),
+("Tizio", "A caso", "tizio@gmail.com", "tizio", "1234", 0),
+("Caio", "Rossi", "caio@gmail.com", "caio", "1234", 0);
 
 INSERT INTO `category`(`name`) VALUES
 ("categoria1"),

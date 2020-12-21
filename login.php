@@ -12,11 +12,6 @@ if(isset($_GET["create_account"])){
     include("template_login.php");
   }
 
-
-//js instead php
-
-
-
 //require (footer.php)
 
  ?>
