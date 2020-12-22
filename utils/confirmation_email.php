@@ -6,8 +6,22 @@ if(isset($_GET["email"]) && isset($_GET["token"]) ){
   $dbh = new DatabaseHelper();
 
   if($dbh -> checkToken($_GET["email"], $_GET["token"])){
-    echo "<p>Email confirmed successfully</p>";
-    echo "<p>You will be redirect at Homepage in 5 seconds</p>";
+  ?>
+  <div class="modal-dialog modal-confirm">
+      <div class="modal-content">
+          <div class="modal-header">
+              <div class="icon-box">
+                  <i class="material-icon"></i>
+              </div>
+              <h4 class="modal-title">Email confermata, benvenuto!</h4>
+          </div>
+          <div class="modal-body">
+              <p class="text-center">Tra 5 secondi sarai reindirizzato alla pagina principale.</p>
+          </div>
+      </div>
+  </div>
+
+<?php
     header( "refresh:5;url=/unibowebsite/login.php" );
   }
   else{
