@@ -17,14 +17,29 @@
         <div class="container-fluid">
                 <div class="hidden-xs">
                     <div class="info-bar">
-                        <div class="row">
-                            <div class="col-sm-10">
+                        <div class="row ">
+                            <div class="col-sm-6 col-sm-offset-5">
                                 <p class="text-right">
                                     <a href="login.php">Login</a>
                                     &nbsp-&nbsp
                                     <a href="template_register.php">Create account</a>
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row row-header">
+                        <div class="col-sm-5">
+                            <p class="text-center">
+                                <img src="img/icons/logo.svg" alt="logo" height="70px">
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="text-right link-distancing">
+                                <a href="#">Shop</a>
+                                <a href="#">Log in/Sign in</a>
+                                <a href="#">Contact</a>
+                                <img src="img/icons/cart.svg" alt="cart" height="45px">
+                            </p>
                         </div>
                     </div>
                 </div>
