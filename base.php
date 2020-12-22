@@ -15,17 +15,24 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="hidden-xs">
-                <div class="info-bar">
-                    <p class="text-right">
-                        <a href="login.php">Login </a>
-                    </p>
+                <div class="hidden-xs">
+                    <div class="info-bar">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <p class="text-right">
+                                    <a href="login.php">Login</a>
+                                    &nbsp-&nbsp
+                                    <a href="template_register.php">Create account</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row row-full-height visible-xs">
                 <div class="col-xs-2">
                     <div class="dropdown">
-                        <button button class="btn btn-outline-dark dropdown-toggle" type="button" 
+                        <button button class="btn btn-dafault dropdown-toggle" type="button" 
                         id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                         </button>
@@ -37,16 +44,15 @@
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <img src="img/icons/logo.svg" alt="login" class="responsive-img">
+                    <img src="img/icons/logo.svg" alt="logo" id="logo">
                 </div> 
                 <div class="col-xs-2">  
-                    <img src="img/icons/login.svg" alt="login" class="icon-size">
+                    <img src="img/icons/login.svg" alt="login">
                 </div>
                 <div class="col-xs-2">
-                    <img src="img/icons/cart.svg" alt="login" class="icon-size">
+                    <img src="img/icons/cart.svg" alt="cart">
                 </div>
             </div>
-
         </div>
 
         <!-- jQuery, Popper.js and Bootstrap JS -->
