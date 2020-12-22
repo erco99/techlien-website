@@ -9,6 +9,9 @@ class DatabaseHelper{
     }
   }
 
+
+                                                ////USER SIDE////
+
   public function login($email, $password){
     $stmt = $this->db->prepare("SELECT * FROM user where email=? and password=?");
     $stmt->bind_param("ss", $email, $password);
@@ -63,6 +66,22 @@ class DatabaseHelper{
     $stmt->execute();
     $stmt->close();
   }
-}
 
+
+                                          ////PRODUCT SIDE/////
+
+  public function getCart($idUser){
+    $stmt = $this->db->prepare("SELECT DISTINCT p.*, c.quantity FROM product p, cart c,  user u where c.iduser = ? and c.idproduct = p.id");
+    $stmt->bind_param("i", $idUser);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return $result->fetch_all(MYSQLI_ASSOC);
+  }
+
+
+
+
+
+}
 ?>
