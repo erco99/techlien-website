@@ -79,6 +79,21 @@ class DatabaseHelper{
     return $result->fetch_all(MYSQLI_ASSOC);
   }
 
+  public function addToCart($idproduct, $idusercart){
+    $stmt = $this->db->prepare("INSERT INTO `cart` (`idproduct`, `iduser`,1) VALUES (?,?)");
+    $stmt->bind_param("ii", $idproduct, $idusercart);
+    $stmt->execute();
+    $stmt->close();
+  }
+
+
+  public function deleteToCart($idproduct, $idusercart){
+    $stmt = $this->db->prepare("DELETE FROM `cart` idproduct = ? AND iduser = ?");
+    $stmt->bind_param("ii", $idproduct, $idusercart);
+    $stmt->execute();
+    $stmt->close();
+  }
+
 
 
 

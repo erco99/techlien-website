@@ -17,6 +17,7 @@ if(isset($_POST["login"])){
     <p>Welcome <?php echo $value["username"] ?></p> </p></p>
     <?php
   endforeach;
+  header("refresh:1; url=/unibowebsite/base.php");
   }
 }
 //register function
