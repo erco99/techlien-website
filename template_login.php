@@ -1,4 +1,5 @@
 <div class="container">
+  <link rel="stylesheet" href="css/style.css">
 
   <div class="row">
     <div class="box">
@@ -31,11 +32,29 @@
               <br>
               <button type="submit" class="btn btn-primary">Entra</button>
             </div>
-            <div>
-              <a href="#">Password dimenticata?</a>
+            <div class="hidden-xs">
+              <div>
+                <a href="#">Password dimenticata?</a>
+              </div>
+              <div>
+                <a href="login.php?create_account">Non sei ancora registrato? Clicca qui.</a>
+              </div>
             </div>
-            <div>
-              <a href="login.php?create_account">Non sei ancora registrato? Clicca qui.</a>
+            <br>
+            <div class="visible-xs">
+              <div class="col-lg-4">
+                <div>
+                  <form action="#" class="inline">
+                    <input type="button" href value="Password dimenticata?" onclick="window.location='#';" style="float:right;" class="btn btn-warning float-right" />
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <div class="col-lg-4">
+                <div>
+                  <input type="button" value="Non sei ancora registrato? Clicca qui."  onclick="window.location='login.php?create_account';" style="float:right;" class="btn btn-info float-right" /></a>
+                </div>
+              </div>
             </div>
           </div>
         </form>

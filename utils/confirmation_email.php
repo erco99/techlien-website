@@ -6,7 +6,7 @@ if(isset($_GET["email"]) && isset($_GET["token"]) ){
   $dbh = new DatabaseHelper();
 
   if($dbh -> checkToken($_GET["email"], $_GET["token"])){
-    echo "<p>Email confirmed succesfully</p>";
+    echo "<p>Email confirmed successfully</p>";
     echo "<p>You will be redirect at Homepage in 5 seconds</p>";
     header( "refresh:5;url=/unibowebsite/login.php" );
   }
@@ -47,14 +47,7 @@ function send_emailConfirm($firstName, $lastName, $email, $username, $password){
   //$mail->addReplyTo("reply@yourdomain.com", "Reply");
 
 
-
-
   $mail->Subject = "Confirm Mail Website";
-  /*$mail->Body = '<p>
-  <a href="localhost/unibowebsite/utils/>confirmation_email.php?email = ".$email "& token=" .$token >Cliccando qui</a>
-  confermi la registrazione al sito Website.com
-  </p>';
-  */
   $mail->Body = '<html><body><p>
   <a href="localhost/unibowebsite/utils/confirmation_email.php?email='.$email.'&token='.$token.'">Cliccando qui</a>
   confermi la registrazione al sito Website.com
