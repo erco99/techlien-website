@@ -1,14 +1,12 @@
-<script src="utils/login_functions.js"></script>
 <?php
-define("TEMPLATE_DIR", "./template/");
-include("base.php");
+require_once 'boot.php';
+
 if(isset($_GET["create_account"])){
-  include(TEMPLATE_DIR."template_register.php");
+  $templateParams["file"] = "template/template_register.php";
 }
  else {
-    include(TEMPLATE_DIR."template_login.php");
+    $templateParams["file"] = "template/template_login.php";
 }
 
-//require (footer.php)
-
+require 'base.php';
 ?>

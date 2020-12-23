@@ -1,6 +1,5 @@
 <?php
 include("base.php");
-define("UPLOAD_DIR", "img/UPLOAD/");
 $total=0;
 $_GLOBAL["idUser"] = 1;
  ?>
@@ -20,8 +19,6 @@ $_GLOBAL["idUser"] = 1;
 				</div>
 				<div class="panel-body">
 					<?php
-					require_once("db/database.php");
-					$dbh = new DatabaseHelper();
 					$result = $dbh -> getCart($_GLOBAL["idUser"]);
 					foreach ($result as $product): ?>
 					<div class="row">
