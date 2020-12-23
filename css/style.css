@@ -10,7 +10,9 @@ body {
     background-color: black;
     color: white;
     padding: 5px 0;
-    height: 35px;
+    height: 40px;
+    align-items: center;
+    display: flex;
 }
 
 .info-bar a:hover{

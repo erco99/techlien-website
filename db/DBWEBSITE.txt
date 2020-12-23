@@ -1,22 +1,25 @@
-/*ELIMINA SE ESISTE E CREA DATABASE*/
-DROP DATABASE IF EXISTS `dbwebsite`;
+/*CREA DATABASE*/
 CREATE DATABASE `dbwebsite`;
-USE `dbwebsite`;
 
 /*CREA TABELLE*/
 CREATE TABLE `user`
 (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `id` int(11) NOT NULL,
     `email` varchar(50) NOT NULL,
     `firstName` varchar(50) NOT NULL,
     `lastName` varchar(50) NOT NULL,
     `username` varchar(30) NOT NULL,
     `password` varchar(16) NOT NULL,
     `token` int(11) NOT NULL,
-    `datesignup` DATE NOT NULL DEFAULT CURRENT_DATE,
-    PRIMARY KEY (`id`)
-
+    `datesignup` DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+
+ALTER TABLE `user`
+ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `user`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 CREATE TABLE `category`
 (
@@ -74,4 +77,4 @@ INSERT INTO `product`(`name`, `description`, `price`,`stock`, `urlimage`, `iduse
 INSERT INTO `cart`(`iduser`, `idproduct`, `quantity`) VALUES
 (1,2,1),
 (2,1,1),
-(1,3,2)
+(1,3,2);
