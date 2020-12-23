@@ -15,6 +15,7 @@
     </head>
     <body>
         <div class="container-fluid">
+            <header>
                 <div class="hidden-xs">
                     <div class="info-bar">
                         <div class="row ">
@@ -43,31 +44,35 @@
                         </div>
                     </div>
                 </div>
-            <div class="row row-full-height visible-xs">
-                <div class="col-xs-2">
-                    <div class="dropdown">
-                        <button button class="btn btn-dafault dropdown-toggle" type="button" 
-                        id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                        </ul>
+                <div class="row row-full-height visible-xs">
+                    <div class="col-xs-2">
+                        <div class="dropdown">
+                            <button button class="btn btn-dafault dropdown-toggle" type="button" 
+                            id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <img src="img/icons/logo.svg" alt="logo" id="logo">
+                    </div> 
+                    <div class="col-xs-2">  
+                        <img src="img/icons/login.svg" alt="login">
+                    </div>
+                    <div class="col-xs-2">
+                        <img src="img/icons/cart.svg" alt="cart">
                     </div>
                 </div>
-                <div class="col-xs-6">
-                    <img src="img/icons/logo.svg" alt="logo" id="logo">
-                </div> 
-                <div class="col-xs-2">  
-                    <img src="img/icons/login.svg" alt="login">
-                </div>
-                <div class="col-xs-2">
-                    <img src="img/icons/cart.svg" alt="cart">
-                </div>
-            </div>
+            </header>
 
+            <main>
+                
+            </main>
             
             <footer>
                 <div class="row visible-xs">
@@ -110,7 +115,6 @@
                         <hr width="15%">
                         <h4>Altro</h4>
                         <a href="#">Contact</a>
-
                     </div>
                 </div>
             </footer>
