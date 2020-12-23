@@ -58,3 +58,17 @@ body {
 .link-distancing a:hover{
     color: #077c40;
 }
+
+.footer-xs-style{
+    text-align: center;
+}
+
+.footer-sm-style{
+    background-color: rgb(4, 85, 4);
+    text-align: center;
+    color: white;
+}
+
+.footer-sm-style > div > a{
+    color: white;
+}

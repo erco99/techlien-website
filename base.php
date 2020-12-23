@@ -43,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="row row-full-height visible-xs">
                 <div class="col-xs-2">
                     <div class="dropdown">
@@ -55,7 +54,7 @@
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
-                          </ul>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-xs-6">
@@ -68,6 +67,53 @@
                     <img src="img/icons/cart.svg" alt="cart">
                 </div>
             </div>
+
+            
+            <footer>
+                <div class="row visible-xs">
+                    <div class="panel-group footer-xs-style" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Information
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                this website bla bla
+                            </div>
+                        </div>
+                        </div>
+                        <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Altro
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                Altra
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hidden-xs footer-sm-style">
+                    <div class="text-center">
+                        <h4>Information</h4>
+                        <a href="#">Contact</a>
+
+                        <hr width="15%">
+                        <h4>Altro</h4>
+                        <a href="#">Contact</a>
+
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <!-- jQuery, Popper.js and Bootstrap JS -->
