@@ -52,7 +52,7 @@ function send_emailConfirm($firstName, $lastName, $email, $username, $password){
 
   //From email address and name
   $mail->From = "UniboWebsite@email.com";
-  $mail->FromName = "UniboWebsite Staff";
+  $mail->FromName = "STAFF UniboWebsite";
 
   //To address and name
   $mail->addAddress($email, $username);
@@ -62,10 +62,16 @@ function send_emailConfirm($firstName, $lastName, $email, $username, $password){
 
 
   $mail->Subject = "Confirm Mail Website";
-  $mail->Body = '<html><body><p>
-  <a href="localhost/unibowebsite/utils/confirmation_email.php?email='.$email.'&token='.$token.'">Cliccando qui</a>
-  confermi la registrazione al sito Website.com
-  </p></body></html>';
+  $mail->Body = '
+  <html>
+    <body>
+      <p>Caro '.$firstName.' '.$lastName.' (oppure dovremmo chiamarti '.$username.')</p>
+      <p> Benvenuto, 
+          <a href="localhost/unibowebsite/utils/confirmation_email.php?email='.$email.'&token='.$token.'">Cliccando qui</a>
+          confermi la registrazione al sito Website.com
+      </p>
+    </body>
+  </html>';
   $mail->AltBody = "Conferma registrazione al sito Website.com";
   //Send HTML or Plain Text email
   $mail->isHTML(true);
