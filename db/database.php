@@ -1,6 +1,7 @@
 <?php
 class DatabaseHelper{
   private $db;
+  private $salt = 45;
 
   public function __construct(){
     $this->db = new mysqli("localhost", "root", "", "dbwebsite");
@@ -14,7 +15,8 @@ class DatabaseHelper{
 
   public function login($email, $password){
     $stmt = $this->db->prepare("SELECT * FROM user where email=? and password=?");
-    $stmt->bind_param("ss", $email, $password);
+    $crypt = crypt($password, $this->salt);
+    $stmt->bind_param("ss", $email, $crypt);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -24,7 +26,8 @@ class DatabaseHelper{
   public function createUser($firstName, $lastName, $email, $username, $password, $token){
     $stmt = $this->db->prepare("INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`, `password`, `token`)
     VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssi", $firstName, $lastName, $email, $username, $password, $token);
+    $crypt = crypt($password, $this->salt);
+    $stmt->bind_param("sssssi", $firstName, $lastName, $email, $username, $crypt, $token);
     $stmt->execute();
     $stmt->close();
   }
