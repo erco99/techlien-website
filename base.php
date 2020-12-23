@@ -17,14 +17,12 @@
         <div class="container-fluid">
             <header>
                 <div class="hidden-xs">
-                    <div class="info-bar">
-                        <div class="row ">
-                            <div class="col-sm-5 col-sm-offset-6">
-                                <div class="text-right">
-                                    <a href="login.php">Login</a>
-                                    &nbsp-&nbsp
-                                    <a href="template_register.php">Create account</a>
-                                </div>
+                    <div class="row info-bar">
+                        <div class="col-sm-5 col-sm-offset-6">
+                            <div class="text-right">
+                                <a href="login.php">Login</a>
+                                &nbsp-&nbsp
+                                <a href="template_register.php">Create account</a>
                             </div>
                         </div>
                     </div>
