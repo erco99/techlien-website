@@ -29,7 +29,7 @@
                     <div class="row row-header">
                         <div class="col-sm-6">
                             <div class="text-center">
-                                <img src="img/icons/logo.svg" alt="logo" height="70px">
+                                <a href="home.php"><img src="img/icons/logo.svg" alt="logo" height="70px"></a>
                             </div>
                         </div>
                         <div class="col-sm-6">
