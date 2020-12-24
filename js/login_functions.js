@@ -1,3 +1,7 @@
+
+
+//DOM READY???
+
 function compareEmail(){
   const reEmail = document.getElementById('inputRepeatEmail');
   const email = document.getElementById('inputEmail');

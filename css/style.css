@@ -70,3 +70,12 @@ body {
 .footer-sm-style > div > a{
     color: white;
 }
+
+
+.img-thumbnail > hidden-xs{
+  style: max-width:300px;
+}
+
+.img-thumbnail > visible-xs{
+  style: max-width:100px;
+}
