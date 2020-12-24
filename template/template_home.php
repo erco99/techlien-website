@@ -37,3 +37,12 @@
         </a>
     </div>
 </div>
+<div class="row">
+    <h4 class="home-subtitle">Most Sold Products</h4>
+    <div class="col-xs-12 col-sm-6">
+        <h1>prova</h1>
+    </div>
+    <div class="col-sm-6">
+        <h1>prova</h1>
+    </div>
+</div>

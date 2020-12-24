@@ -38,6 +38,7 @@ CREATE TABLE `product`
     `price` DECIMAL(10,2) NOT NULL,
     `stock` int(10) NOT NULL,
     `urlimage` varchar(30) NOT NULL,
+    `sold` int(10) NOT NULL DEFAULT 0,
     `iduser` int(11) NOT NULL,
     `idcategory` int(11) NOT NULL,
     PRIMARY KEY (`id`),
