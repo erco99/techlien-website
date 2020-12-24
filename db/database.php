@@ -4,7 +4,7 @@ class DatabaseHelper{
   private $salt = 45;
 
   public function __construct(){
-    $this->db = new mysqli("localhost", "root", "", "dbwebsite");
+    $this->db = new mysqli("db4free.net", "bububu1234", "332bd625", "websiteunibo");
     if($this->db->connect_error){
       die("Connesione fallita al db");
     }
