@@ -86,8 +86,8 @@ body {
 }
 
 .home-products img{
-    width: 400px;
-    height: 200px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .img-thumbnail > hidden-xs{

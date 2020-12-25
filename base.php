@@ -37,7 +37,7 @@
                                 <a href="#">Shop</a>
                                 <a href="#">Log in/Sign in</a>
                                 <a href="#">Contact</a>
-                                <img src="img/icons/cart.svg" alt="cart" height="45px">
+                                <a href="cart.php"><img src="img/icons/cart.svg" alt="cart" height="37px"></a>
                             </div>
                         </div>
                     </div>
