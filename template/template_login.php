@@ -4,8 +4,8 @@
   <div class="row">
     <div class="box">
 
-      <div class="col-lg-12">
-        <h1 style="text-align:center;">Login</h1>
+      <div class="col-lg-12 form-title">
+        <h1>Login</h1>
       </div>
       <hr>
       <div>
@@ -22,7 +22,7 @@
           </div>
           <div class="form-group centered">
             <div class="col-sm-12">
-              <label for="inputPassword" style="margin-top:20px;">Password:</label>
+              <label for="inputPassword">Password:</label>
               <input type="password" class="form-control" name="password" id="inputPassword" aria-describedby="passwordHelp" placeholder="Password" />
               <small id="passwordHelp" class="form-text text-muted"></small>
             </div>
@@ -30,8 +30,8 @@
           <div class="form-group centered">
             <div class="col-sm-12">
               <br>
-              <button type="submit" class="btn btn-primary hidden-xs" style="margin-bottom:40px;" >Entra</button>
-              <button type="submit" class="btn btn-primary visible-xs" style="width:100%;">Entra</button>
+              <button type="submit" class="btn btn-primary hidden-xs enter-desktop">Entra</button>
+              <button type="submit" class="btn btn-primary visible-xs enter-mobile">Entra</button>
             </div>
           </div>
           <div>

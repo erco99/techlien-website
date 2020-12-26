@@ -97,3 +97,23 @@ body {
 .img-thumbnail > visible-xs{
     max-width:100px;
 }
+
+button.enter-desktop{
+    margin-bottom:40px;
+    width: 100px;
+    height: 50px;
+}
+
+button.enter-mobile{
+    height: 60px;
+    width:100%;
+    font-size: 30px;
+}
+
+div.form-title > h1{
+    text-align:center;
+}
+
+div.form-text > label, button{
+    margin-top:20px;
+}
