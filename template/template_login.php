@@ -1,6 +1,4 @@
 <div class="container">
-  <link rel="stylesheet" href="css/style.css">
-
   <div class="row">
     <div class="box">
 

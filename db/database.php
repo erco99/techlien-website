@@ -72,7 +72,7 @@ class DatabaseHelper{
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->close();
-//TODO mkdir permission denied. Resolve!!! 
+//TODO mkdir permission denied. Resolve!!!
   /*  //create dir of the user for upload and profile photo
     $stmt = $this->db->prepare("SELECT `id` FROM`user` WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -113,6 +113,26 @@ class DatabaseHelper{
     $stmt->execute();
     $stmt->close();
   }
+
+
+  public function getOrders($idUser){
+    $stmt = $this->db->prepare("SELECT DISTINCT p.*, o.*, u.username as uservendor FROM product p, orders o, user u where o.idbuyer = ? and o.idproduct = p.id and u.id = p.iduser");
+    $stmt->bind_param("i", $idUser);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return $result->fetch_all(MYSQLI_ASSOC);
+  }
+
+  public function getSelledProduct($idUser){
+    $stmt = $this->db->prepare("SELECT DISTINCT p.* FROM product p where p.iduser = ?");
+    $stmt->bind_param("i", $idUser);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return $result->fetch_all(MYSQLI_ASSOC);
+  }
+
 
   public function mostSold($limit){
     $stmt = $this->db->prepare("SELECT urlimage, name, price FROM product ORDER BY sold DESC limit ?");

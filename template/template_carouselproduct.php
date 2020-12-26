@@ -23,7 +23,7 @@ $images = explode(";", $product["urlimage"]);
       <?php  for($i = 0; $i < count($images); $i++){
         if($i == 0){ ?>
           <div class="item active">
-            <img src=" <?php echo UPLOAD_DIR.$product["iduser"]."/".$images[$i];?>" alt="image product" style="max-width: width:100%">
+            <img src=" <?php echo UPLOAD_DIR.$product["iduser"]."/".$images[$i];?>" alt="image product" style="width:100%">
           </div>
           <?php
         }
