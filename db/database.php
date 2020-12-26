@@ -1,5 +1,6 @@
 <?php
 class DatabaseHelper{
+
   private $db;
   private $salt = 45;
 
@@ -14,7 +15,7 @@ class DatabaseHelper{
   }
 
 
-                                                ////USER SIDE////
+  ////USER SIDE////
 
   public function login($email, $password){
     $stmt = $this->db->prepare("SELECT * FROM user where email=? and password=?");
@@ -71,10 +72,23 @@ class DatabaseHelper{
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->close();
+//TODO mkdir permission denied. Resolve!!! 
+  /*  //create dir of the user for upload and profile photo
+    $stmt = $this->db->prepare("SELECT `id` FROM`user` WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
+    foreach ($result as $id){
+      if(!mkdir("../img/UPLOAD/".$id["id"], 0777, true))
+      die("Impossible to create directory");
+    }
+*/
   }
 
 
-                                          ////PRODUCT SIDE/////
+  ////PRODUCT SIDE/////
 
   public function getCart($idUser){
     $stmt = $this->db->prepare("SELECT DISTINCT p.*, c.quantity FROM product p, cart c,  user u where c.iduser = ? and c.idproduct = p.id");

@@ -1,7 +1,6 @@
 <?php
 
-require_once("../db/database.php");
-$dbh = new DatabaseHelper();
+require_once "../boot.php";
 // login form called this .php
 if(isset($_POST["login"])){
   $user = $dbh -> login($_POST["email"], $_POST["password"] );
@@ -12,13 +11,12 @@ if(isset($_POST["login"])){
     <?php
   }
   else{
-    foreach($user as $value):
-    ?>
-    <p>Welcome <?php echo $value["username"] ?></p> </p></p>
-    <?php
-  endforeach;
-  header("refresh:1; url=/unibowebsite/base.php");
+    foreach($user as $data){
+      $u = new User($data);
+      header("Location:/unibowebsite/profile.php");
+    }
   }
+
 }
 //register function
 else{

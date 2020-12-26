@@ -30,8 +30,8 @@
           <div class="form-group centered">
             <div class="col-sm-12">
               <br>
-              <button type="submit" class="btn btn-primary hidden-xs enter-desktop">Entra</button>
-              <button type="submit" class="btn btn-primary visible-xs enter-mobile">Entra</button>
+              <button type="submit" class="btn btn-primary hidden-xs enter-desktop">Enter</button>
+              <button type="submit" class="btn btn-primary visible-xs enter-mobile">Enter</button>
             </div>
           </div>
           <div>
@@ -39,7 +39,7 @@
               <a href="#">Password dimenticata?</a>
             </div>
             <div class="hidden-xs">
-              <a href="login.php?create_account">Are you still not registered? Clicck here.</a>
+              <a href="login.php?create_account">Are you still not registered? Click here.</a>
             </div>
             <div class="visible-xs">
               <div class="col-lg-4 form-title">

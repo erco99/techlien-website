@@ -1,7 +1,7 @@
 <?php
 require_once 'boot.php';
 $total=0;
-$_GLOBAL["idUser"] = 1;
+$_GLOBAL["idUser"] = 1; // example 
 $templateParams["file"] = TEMPLATE_DIR."template_cart.php";
 require 'base.php';
 

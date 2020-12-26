@@ -59,11 +59,11 @@ form > label{
             </div>
             <div class="form-group centered">
               <div class="col-sm-12 form-text">
-                <button type="submit" class="btn btn-primary hidden-xs enter-desktop" aria-describedby="ButtonRegister">Registrati</button>
-                <button type="submit" class="btn btn-primary visible-xs enter-mobile" aria-describedby="ButtonRegister">Registrati</button>
+                <button type="submit" class="btn btn-primary hidden-xs enter-desktop" aria-describedby="ButtonRegister">Sign up</button>
+                <button type="submit" class="btn btn-primary visible-xs enter-mobile" aria-describedby="ButtonRegister">Sign up</button>
               </div>
               <div class="hidden-xs">
-                <a href="login.php">Già registrato? Clicca qui.</a>
+                <a href="login.php">Still registered? Click here.</a>
               </div>
               <div class="visible-xs">
                 <div class="col-lg-4 form-title">
