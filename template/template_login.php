@@ -22,7 +22,7 @@
           </div>
           <div class="form-group centered">
             <div class="col-sm-12">
-              <label for="inputPassword">Password:</label>
+              <label for="inputPassword" style="margin-top:20px;">Password:</label>
               <input type="password" class="form-control" name="password" id="inputPassword" aria-describedby="passwordHelp" placeholder="Password" />
               <small id="passwordHelp" class="form-text text-muted"></small>
             </div>
@@ -30,33 +30,30 @@
           <div class="form-group centered">
             <div class="col-sm-12">
               <br>
-              <button type="submit" class="btn btn-primary">Entra</button>
+              <button type="submit" class="btn btn-primary hidden-xs" style="margin-bottom:40px;" >Entra</button>
+              <button type="submit" class="btn btn-primary visible-xs" style="width:100%;">Entra</button>
             </div>
-            <div class="hidden-xs">
+          </div>
+          <div>
               <div>
                 <a href="#">Password dimenticata?</a>
               </div>
-              <div>
+              <div class="hidden-xs">
                 <a href="login.php?create_account">Non sei ancora registrato? Clicca qui.</a>
               </div>
-            </div>
             <br>
-            <div class="visible-xs">
+            <div class="visible-xs" style="text-align:center;">
               <div class="col-lg-4">
+              <h3 >Are you new to Techlien ?</h3>
                 <div>
                   <form action="#" class="inline">
-                    <input type="button" href value="Password dimenticata?" onclick="window.location='#';" style="float:right;" class="btn btn-warning float-right" />
+                    <input type="button" href value="CREATE A NEW ACCOUNT" onclick="window.location='login.php?create_account';" class="btn btn-success float-right" style="margin-bottom:80px;" />
                   </form>
                 </div>
               </div>
-              <hr>
-              <div class="col-lg-4">
-                <div>
-                  <input type="button" value="Non sei ancora registrato? Clicca qui."  onclick="window.location='login.php?create_account';" style="float:right;" class="btn btn-info float-right" /></a>
-                </div>
+              </div>
               </div>
             </div>
-          </div>
         </form>
 
       </div>

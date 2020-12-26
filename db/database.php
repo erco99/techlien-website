@@ -5,7 +5,9 @@ class DatabaseHelper{
 
   public function __construct(){
     //$this->db = new mysqli("db4free.net", "bububu1234", "332bd625", "websiteunibo");
-    $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
+    //$this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
+    $this->db = new mysqli("localhost", "root", "", "dbwebsite");
+
     if($this->db->connect_error){
       die("Connesione fallita al db");
     }
@@ -103,7 +105,7 @@ class DatabaseHelper{
     $stmt->bind_param("i", $limit);
     $stmt->execute();
     $result = $stmt->get_result();
-    
+
     $result->fetch_all(MYSQLI_ASSOC);
 
     $i = 0;
