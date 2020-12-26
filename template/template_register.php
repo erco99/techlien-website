@@ -65,14 +65,15 @@ form > label{
               <div class="hidden-xs">
                 <a href="login.php">Già registrato? Clicca qui.</a>
               </div>
-              <div class="visible-xs" style="text-align:center;">
-                <div class="col-lg-4">
+              <div class="visible-xs">
+                <div class="col-lg-4 form-title">
                 <h3 >Are you still register to Techlien ?</h3>
-                  <div>
-                <input type="button" id value="Login"  onclick="window.location='login.php';" class=" btn btn-success float-right" /></a>
+                  <div class="form-title">
+                <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
               </div>
             </div>
           </div>
+        </div>
 
           </form>
 
