@@ -37,9 +37,9 @@
         </a>
     </div>
 </div>
+<h4 class="home-subtitle">Most Sold Products</h4>
+<?php for($i = 0; $i < $mostSoldLimit; $i = $i + 2): ?> 
 <div class="row">
-    <h4 class="home-subtitle">Most Sold Products</h4>
-    <?php for($i = 0; $i < $mostSoldLimit; $i = $i + 2): ?> 
     <div class="col-xs-12 col-sm-6">
         <div class="home-products">
             <img src="<?php echo "img/home_images/".$product[$i]["urlimage"] ?>" alt="home_image">
@@ -54,5 +54,5 @@
             <h6><?php echo $product[$i+1]["price"]?></h6>
         </div>
     </div>
-    <?php endfor ?>
 </div>
+<?php endfor ?>
