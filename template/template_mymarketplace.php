@@ -34,7 +34,7 @@ else {
                </div>
             </div>
 
-            <div class="col-lg-2 ">
+            <div class="col-lg-2">
                <h4><strong><?php echo $product["name"] ?></strong></h4>
                <h5><?php echo $product["description"] ?></h5>
             </div>

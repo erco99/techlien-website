@@ -34,7 +34,7 @@
         </div>
 
         <?php
-        require_once("template_myorder.php");
+        require("template_myorder.php");
       }
       else{
 
@@ -52,7 +52,7 @@
           </div>
           <?php
 
-          require_once("template_mymarketplace.php");
+          require("template_mymarketplace.php");
         }
         ?>
       </div>

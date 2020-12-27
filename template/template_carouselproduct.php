@@ -3,7 +3,7 @@ $index = 0;
 $images = explode(";", $product["urlimage"]);
 ?>
 <div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width:300px; max-height: 300px; ">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width:200px; max-height: 200px; min-height:200px">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <?php  for($i = 0; $i < count($images); $i++){
