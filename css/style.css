@@ -118,3 +118,13 @@ button.enter-mobile{
 div.form-text > label, button{
     margin-top:20px;
 }
+
+.shop-nav{
+    text-align: center;
+    padding: 40px 0;
+}
+
+.shop-nav .btn{
+    background-color: green;
+    border-color: black;
+}

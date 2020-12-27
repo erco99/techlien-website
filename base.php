@@ -128,6 +128,7 @@
         <!-- Personal javascript files-->
         <script src="js/login_functions.js"></script>
         <script src="js/market_functions.js"></script>
+        <script src="js/shop_functions.js"></script>
 
     </body>
 </html>
