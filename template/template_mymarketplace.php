@@ -61,24 +61,27 @@ else {
 
 ?>
 
-
-<button type="button" class="btn btn-default btn-lg" onclick="addProductToSell()">
+<button id="btn_addproduct" class="btn btn-default btn-lg" onclick="addProductToSell()">
    <span class="glyphicon glyphicon-plus-sign"></span> Sell new product
 </button>
 
 <!-- CREATE A PRODUCT FORM (hidden default)-->
-<form class="hidden" action="/addProduct.php" method="POST">
+<form id="form_addproduct" style="display:none;" action="/addProduct.php" method="POST">
    <div class="col-sm-12 form-text">
       <label for="nameProduct">Product name:</label>
-      <input type="input" class="form-control" name="textname" id="inputText" aria-describedby="nameProductHelp" placeholder="es. scheda video GTX XXXTI " />
+      <input type="input" class="form-control" name="nameProduct" id="inputText" aria-describedby="nameProductHelp" placeholder="es. scheda video GTX XXXTI " />
    </div>
    <div class="col-sm-12 form-text">
-      <label for="nameProduct">Product description:</label>
-      <input type="text" class="form-control" name="textname" id="inputText" aria-describedby="descriptionProductHelp" placeholder="es. scheda video GTX XXXTI modello X anno 2015 usato" />
+      <label for="descriptionProduct">Product description:</label>
+      <input type="text" class="form-control" name="descriptionProduct" id="inputText" aria-describedby="descriptionProductHelp" placeholder="es. scheda video GTX XXXTI modello X anno 2015 usato" />
    </div>
    <div class="col-sm-12 form-text">
-      <label for="nameProduct">Price:</label>
-      <input type="text" class="form-control" name="textname" id="inputText" aria-describedby="priceProductHelp" placeholder="es. 300,99 " > €</input>
+      <label for="stockproduct">Stock:</label>
+      <input type="text" class="form-control" name="stockproduct" id="inputText" aria-describedby="priceProductHelp" placeholder="es. 300,99 " >
    </div>
-   <button type="submit" class="form-hide">SELL</button>
+   <div class="col-sm-12 form-text">
+      <label for="priceProduct">Price:</label>
+      <input type="text" class="form-control" name="priceProduct" id="inputText" aria-describedby="priceProductHelp" placeholder="es. 300,99 " >
+   </div>
+   <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-upload"></span> SELL</button>
 </form>

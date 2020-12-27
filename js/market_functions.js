@@ -1,6 +1,9 @@
 function addProductToSell(){
-  $('form.hidden').on('click', function() {
-    $('form.hidden').show();
-    console.log("PREMUTO");
-});
+  var x = document.getElementById("form_addproduct");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
 }
