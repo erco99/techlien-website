@@ -91,15 +91,15 @@ body {
 }
 
 .img-thumbnail > hidden-xs{
-    max-width:300px;
+    max-width: 300px;
 }
 
 .img-thumbnail > visible-xs{
-    max-width:100px;
+    max-width: 100px;
 }
 
 button.enter-desktop{
-    margin-bottom:40px;
+    margin-bottom: 40px;
     width: 100px;
     height: 50px;
 }
@@ -112,11 +112,11 @@ button.enter-mobile{
 
 
 .form-title{
-    text-align:center;
+    text-align: center;
 }
 
 div.form-text > label, button{
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .shop-nav{
@@ -127,4 +127,31 @@ div.form-text > label, button{
 .shop-nav .btn{
     background-color: green;
     border-color: black;
+}
+
+.panel-heading {
+    padding: 0;
+    border:0;
+}
+
+.panel-title>a, .panel-title>a:active{
+    display: block;
+    padding:15px;
+}
+
+.panel-heading  a:before{
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+} 
+
+.home-mobile button{
+    margin: 0px;
 }

@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="text-center link-distancing">
-                                <a href="#">Shop</a>
+                                <a href="shop.php">Shop</a>
                                 <a href="#">Log in/Sign in</a>
                                 <a href="#">Contact</a>
                                 <a href="cart.php"><img src="img/icons/cart.svg" alt="cart" height="30px"></a>
@@ -43,22 +43,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-full-height visible-xs">
-                    <div class="col-xs-2">
-                        <div class="dropdown">
-                            <button button class="btn btn-dafault dropdown-toggle" type="button"
-                            id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="row row-full-height visible-xs home-mobile">
+                
+                    <div class="col-xs-2 home-mobile">                  
+                        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#first">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </button>
+                    </div> 
+                   
                     <div class="col-xs-6">
-                        <img src="img/icons/logo.svg" alt="logo" id="logo">
+                       <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="logo"></a>
                     </div>
                     <div class="col-xs-2">
                         <img src="img/icons/login.svg" alt="login">
@@ -67,6 +61,24 @@
                         <img src="img/icons/cart.svg" alt="cart">
                     </div>
                 </div>
+
+                <div class="row">
+                    <div id="first" class="collapse">
+                        <p>
+                            <a href="#">Account</a>
+                        </p>
+                        <p>
+                            <a href="#" data-toggle="collapse" data-target="#second">
+                                Shop
+                            </a>
+                            <div id="second" class="collapse">
+                                
+                            </div>
+                        </p>
+                    </div>
+                </div>             
+
+                
             </header>
             <main>
             <?php
@@ -81,12 +93,12 @@
                         <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Information
                             </a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
                                 this website bla bla
                             </div>
@@ -129,6 +141,6 @@
         <script src="js/login_functions.js"></script>
         <script src="js/market_functions.js"></script>
         <script src="js/shop_functions.js"></script>
-
+        <script src="js/general_functions.js"></script>
     </body>
 </html>
