@@ -66,22 +66,44 @@ else {
 </button>
 
 <!-- CREATE A PRODUCT FORM (hidden default)-->
-<form id="form_addproduct" style="display:none;" action="/addProduct.php" method="POST">
+<form id="form_addproduct" style="display:none;" action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" enctype="multipart/form-data">
    <div class="col-sm-12 form-text">
       <label for="nameProduct">Product name:</label>
-      <input type="input" class="form-control" name="nameProduct" id="inputText" aria-describedby="nameProductHelp" placeholder="es. scheda video GTX XXXTI " />
+      <input type="input" class="form-control" name="nameProduct" id="inputNameProduct" aria-describedby="nameProductHelp" placeholder="es. scheda video GTX XXXTI " required/>
+      <small id="inputNameProduct_control" class="form-text text-muted"></small>
+
    </div>
    <div class="col-sm-12 form-text">
       <label for="descriptionProduct">Product description:</label>
-      <input type="text" class="form-control" name="descriptionProduct" id="inputText" aria-describedby="descriptionProductHelp" placeholder="es. scheda video GTX XXXTI modello X anno 2015 usato" />
+      <input type="text" class="form-control" name="descriptionProduct" id="inputDescriptionProduct" aria-describedby="descriptionProductHelp" placeholder="es. scheda video GTX XXXTI modello X anno 2015 usato" required/>
+      <small id="inputDescriptionProduct_control" class="form-text text-muted"></small>
+
    </div>
    <div class="col-sm-12 form-text">
       <label for="stockproduct">Stock:</label>
-      <input type="text" class="form-control" name="stockproduct" id="inputText" aria-describedby="priceProductHelp" placeholder="es. 300,99 " >
+      <input type="text" class="form-control" name="stockproduct" id="inputStockProduct" aria-describedby="stockProductHelp" placeholder="es. 56" required  onfocusout="parseInputStock()">
+      <small id="inputStockProduct_control" class="form-text text-muted"></small>
+
    </div>
    <div class="col-sm-12 form-text">
       <label for="priceProduct">Price:</label>
-      <input type="text" class="form-control" name="priceProduct" id="inputText" aria-describedby="priceProductHelp" placeholder="es. 300,99 " >
+      <input type="text" class="form-control" name="priceProduct" id="inputPriceProduct" aria-describedby="priceProductHelp" placeholder="es. 300,99 " required  onfocusout="parseInputPrice()">
+      <small id="inputPriceProduct_control" class="form-text text-muted"></small>
+
    </div>
+   <div class="col-sm-12 form-text">
+      <label for="urlimageProduct">Upload image of the product:</label>
+      <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+   </div>
+
+   <div class="col-sm-12 form-text">
+<label for="categoryProduct_label">Choose a category:</label>
+   <select name="categoryProduct" id="category" required>
+      <?php foreach ($dbh->getCategories() as $category) : ?>
+      <option value="<?php echo $category["id"]; ?>"><?php echo $category["name"]; ?></option>
+   <?php endforeach; ?>
+   </select>
+   </div>
+
    <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-upload"></span> SELL</button>
 </form>

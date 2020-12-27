@@ -72,19 +72,7 @@ class DatabaseHelper{
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->close();
-//TODO mkdir permission denied. Resolve!!!
-  /*  //create dir of the user for upload and profile photo
-    $stmt = $this->db->prepare("SELECT `id` FROM`user` WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $stmt->close();
 
-    foreach ($result as $id){
-      if(!mkdir("../img/UPLOAD/".$id["id"], 0777, true))
-      die("Impossible to create directory");
-    }
-*/
   }
 
 
@@ -155,6 +143,26 @@ class DatabaseHelper{
   }
 
 
+  public function createProduct($name, $description, $price, $stock, $iduser, $idcategory, $urlimage){
+    $stmt = $this->db->prepare("INSERT INTO `product`(`name`, `description`, `price`, `stock`, `iduser`, `idcategory`, `urlimage`)
+    VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssdiiis", $name, $description, $price, $stock, $iduser, $idcategory, $urlimage);
+    $stmt->execute();
+    $stmt->close();
+  }
+
+
+  ////CATEGORY SIDE/////
+
+
+public function getCategories(){
+  $stmt = $this->db->prepare("SELECT * FROM category");
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $result->fetch_all(MYSQLI_ASSOC);
+
+  return $result;
+}
 
 
 }
