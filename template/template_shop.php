@@ -11,7 +11,7 @@
     </button>
     <div class="collapse collapse-category" id="hardware">
       <div class="well">
-        categorie hardware
+        <a href="#">Laptop</a>
       </div>
     </div>
     <div class="collapse collapse-category" id="software">

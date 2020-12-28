@@ -63,11 +63,11 @@ form > label{
                 <button type="submit" class="btn btn-primary visible-xs enter-mobile" aria-describedby="ButtonRegister">Sign up</button>
               </div>
               <div class="hidden-xs">
-                <a href="login.php">Still registered? Click here.</a>
+                <a href="login.php">Already registered? Click here.</a>
               </div>
               <div class="visible-xs">
                 <div class="col-lg-4 form-title">
-                <h3 >Are you still register to Techlien ?</h3>
+                <h3 >Are you already registered to Techlien ?</h3>
                   <div class="form-title">
                 <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
               </div>

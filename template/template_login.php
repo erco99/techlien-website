@@ -37,7 +37,7 @@
               <a href="#">Password dimenticata?</a>
             </div>
             <div class="hidden-xs">
-              <a href="login.php?create_account">Are you still not registered? Click here.</a>
+              <a href="login.php?create_account">Not registered yet? Click here.</a>
             </div>
             <div class="visible-xs">
               <div class="col-lg-4 form-title">

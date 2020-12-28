@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row visible-xs">
                     <div id="first" class="collapse">
                         <p>
                             <a href="#">Account</a>
@@ -72,7 +72,7 @@
                                 Shop
                             </a>
                             <div id="second" class="collapse">
-                                
+                                something
                             </div>
                         </p>
                     </div>
