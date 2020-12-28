@@ -138,7 +138,7 @@ class DatabaseHelper{
       $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
       $i++;
     }
-  
+
   return $array_product;
   }
 
@@ -150,7 +150,6 @@ class DatabaseHelper{
     $stmt->close();
   }
 
-<<<<<<< HEAD
   public function getProductByCat($idMacro, $idCat){
     $stmt = $this->db->prepare("SELECT p.name, p.price, p.urlimage
       FROM product p, category c, macrocategory m
@@ -158,10 +157,10 @@ class DatabaseHelper{
       p.idcategory = c.id and
       c.idmacro = m.id and
       m.id = ?");
-    
+
     $stmt->bind_param("ii", $idCat, $idMacro);
     $stmt->execute();
-    
+
     $result = $stmt->get_result();
     $result->fetch_all(MYSQLI_ASSOC);
 
@@ -195,7 +194,7 @@ class DatabaseHelper{
 
   return $array_product;
   }
-=======
+
   public function updateProduct($id, $name, $description, $price, $stock){
 
     $stmt = $this->db->prepare("UPDATE `product` SET name=?, description=?, price=?, stock=? WHERE id= ?");
@@ -205,9 +204,6 @@ class DatabaseHelper{
     $stmt->close();
   }
 
-
-
->>>>>>> cf8be22... completed mymarketplace in profile
 
   ////CATEGORY SIDE/////
 
@@ -220,15 +216,13 @@ class DatabaseHelper{
 
     return $result;
   }
-<<<<<<< HEAD
+
 
   public function getMacrocategories(){
     $stmt = $this->db->prepare("SELECT * FROM macrocategory");
     $stmt->execute();
     $result = $stmt->get_result();
     $result->fetch_all(MYSQLI_ASSOC);
-=======
->>>>>>> cf8be22... completed mymarketplace in profile
 
     return $result;
   }
