@@ -37,7 +37,7 @@ else {
                            require_once("template_carouselproduct.php");
                         }
                         else{ ?>
-                           <img src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="">
+                           <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="">
                         <?php } ?>
                      </div>
                   </div>

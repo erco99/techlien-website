@@ -55,7 +55,7 @@
 								<input type="text" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
 							</div>
 							<div class="col-xs-12">
-								<button type="button" class="btn btn-link btn-xs float-right" style="float:right;" onclick="delete()">
+								<button type="button" class="btn btn-link btn-xs float-right" style="float:right;" onclick="deleteFromCart(<?php echo $product["id"].',' .$_SESSION["id"]; ?>)">
 									<span class="glyphicon glyphicon-trash"> </span>
 								</button>
 							</div>

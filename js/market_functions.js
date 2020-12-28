@@ -1,3 +1,8 @@
+function deleteFromCart(idproduct, iduser){
+  console.log("P:"+idproduct + " U:"+iduser);
+}
+
+
 function addProductToSell(){
   let form = document.getElementById("form_addproduct");
   if (form.style.display === "none") {
@@ -24,21 +29,6 @@ function editProductToSell(id){
     add.style.display = "block";
   }
 
-
-}
-
-function updateProductToSell(id){
-if( $('#desktopedit-product_'+id).css('display')=='block'){
-  alert("DESKTOP");
-
-  const name = document.getElementById("name_text_"+id).value;
-  const description = document.getElementById("description_text_"+id).value;
-  const price = document.getElementById("price_text_"+id).value;
-  const stock = document.getElementById("stock_text_"+id).value;
-}
-if($('#mobileedit-product_'+id).css('display')=='block'){
-  alert("MOBILE");
-}
 
 }
 
