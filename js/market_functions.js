@@ -1,12 +1,47 @@
 function addProductToSell(){
-  let x = document.getElementById("form_addproduct");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  let form = document.getElementById("form_addproduct");
+  if (form.style.display === "none") {
+    form.style.display = "block";
   } else {
-    x.style.display = "none";
+    form.style.display = "none";
   }
 
 }
+
+function editProductToSell(id){
+  let add = document.getElementById("watch-product_"+id);
+  let edit = document.getElementById("edit-product_"+id);
+
+
+  if (edit.style.display === "none") {
+    edit.style.display = "block";
+
+    add.style.display = "none";
+
+  } else {
+    edit.style.display = "none";
+
+    add.style.display = "block";
+  }
+
+
+}
+
+function updateProductToSell(id){
+if( $('#desktopedit-product_'+id).css('display')=='block'){
+  alert("DESKTOP");
+
+  const name = document.getElementById("name_text_"+id).value;
+  const description = document.getElementById("description_text_"+id).value;
+  const price = document.getElementById("price_text_"+id).value;
+  const stock = document.getElementById("stock_text_"+id).value;
+}
+if($('#mobileedit-product_'+id).css('display')=='block'){
+  alert("MOBILE");
+}
+
+}
+
 
 function parseInputStock(){
   let stock = document.getElementById('inputStockProduct');

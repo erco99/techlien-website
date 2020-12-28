@@ -133,8 +133,6 @@ else {
           </table>
         </div>
       </div>
-    </div>
-  </div>
 
 
 <?php endforeach;

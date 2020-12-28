@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-xs-4">
-        <img src="<?php echo UPLOAD_DIR.$_SESSION["id"];?>/profile.jpg" alt="profile photo"  style="max-width:100px;"/>
+        <img src="/unibowebsite/img/icons/profile.jpg" alt="profile photo"  style="max-width:100px;"/>
       </div>
       <div class="col-xs-6">
         <label for="inputname"><?php echo $_SESSION["firstName"] ?></label>

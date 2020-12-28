@@ -144,12 +144,13 @@ class DatabaseHelper{
 
   public function createProduct($name, $description, $price, $stock, $iduser, $idcategory, $urlimage){
     $stmt = $this->db->prepare("INSERT INTO `product`(`name`, `description`, `price`, `stock`, `iduser`, `idcategory`, `urlimage`)
-    VALUES (?, ?, ?, ?, ?, ?)");
+    VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssdiiis", $name, $description, $price, $stock, $iduser, $idcategory, $urlimage);
     $stmt->execute();
     $stmt->close();
   }
 
+<<<<<<< HEAD
   public function getProductByCat($idMacro, $idCat){
     $stmt = $this->db->prepare("SELECT p.name, p.price, p.urlimage
       FROM product p, category c, macrocategory m
@@ -194,6 +195,19 @@ class DatabaseHelper{
 
   return $array_product;
   }
+=======
+  public function updateProduct($id, $name, $description, $price, $stock){
+
+    $stmt = $this->db->prepare("UPDATE `product` SET name=?, description=?, price=?, stock=? WHERE id= ?");
+    $stmt->bind_param("ssdii", $name, $description, $price, $stock, $id);
+
+    $stmt->execute();
+    $stmt->close();
+  }
+
+
+
+>>>>>>> cf8be22... completed mymarketplace in profile
 
   ////CATEGORY SIDE/////
 
@@ -206,12 +220,15 @@ class DatabaseHelper{
 
     return $result;
   }
+<<<<<<< HEAD
 
   public function getMacrocategories(){
     $stmt = $this->db->prepare("SELECT * FROM macrocategory");
     $stmt->execute();
     $result = $stmt->get_result();
     $result->fetch_all(MYSQLI_ASSOC);
+=======
+>>>>>>> cf8be22... completed mymarketplace in profile
 
     return $result;
   }
