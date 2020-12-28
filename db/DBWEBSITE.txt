@@ -21,11 +21,23 @@ ADD PRIMARY KEY (`id`);
 ALTER TABLE `user`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
-CREATE TABLE `category`
+
+CREATE TABLE `macrocategory`
 (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `name` varchar(30) NOT NULL,
     PRIMARY KEY (`id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+
+CREATE TABLE `category`
+(
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(30) NOT NULL,
+    `idmacro` int(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`idmacro`) REFERENCES `macrocategory`(`id`)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
@@ -88,10 +100,16 @@ INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`,`password`, `tok
 ("Tizio", "A caso", "tizio@gmail.com", "tizio", "1234", 0),
 ("Caio", "Rossi", "caio@gmail.com", "caio", "1234", 0);
 
-INSERT INTO `category`(`name`) VALUES
-("categoria1"),
-("categoria2"),
-("categoria3");
+INSERT INTO `macrocategory`(`name`) VALUES
+("hardware"),
+("software", 1),
+("gaming", 3);
+
+
+INSERT INTO `category`(`name`, `idmacro`) VALUES
+("categoria1", 1),
+("categoria2", 1),
+("categoria3", 3);
 
 INSERT INTO `product`(`name`, `description`, `price`,`stock`, `urlimage`, `iduser`, `idcategory`) VALUES
 ("prodotto1", "Questa è la descrizione del prodotto 1", 14.99, 100, "prova1.jpg", 1, 1),
