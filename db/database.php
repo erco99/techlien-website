@@ -138,10 +138,9 @@ class DatabaseHelper{
       $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
       $i++;
     }
-    return $array_product;
-
+  
+  return $array_product;
   }
-
 
   public function createProduct($name, $description, $price, $stock, $iduser, $idcategory, $urlimage){
     $stmt = $this->db->prepare("INSERT INTO `product`(`name`, `description`, `price`, `stock`, `iduser`, `idcategory`, `urlimage`)
@@ -151,19 +150,80 @@ class DatabaseHelper{
     $stmt->close();
   }
 
+  public function getProductByCat($idMacro, $idCat){
+    $stmt = $this->db->prepare("SELECT p.name, p.price, p.urlimage
+      FROM product p, category c, macrocategory m
+      WHERE p.idcategory = ? and
+      p.idcategory = c.id and
+      c.idmacro = m.id and
+      m.id = ?");
+    
+    $stmt->bind_param("ii", $idCat, $idMacro);
+    $stmt->execute();
+    
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+
+    $i = 0;
+    foreach ($result as $product){
+      $urlimage = $product["urlimage"];
+      $name = $product["name"];
+      $price = $product["price"];
+      $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
+      $i++;
+    }
+
+  return $array_product;
+  }
+
+  public function getAllProducts(){
+    $stmt = $this->db->prepare("SELECT name, price, urlimage FROM product");
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+
+    $i = 0;
+    foreach ($result as $product){
+      $urlimage = $product["urlimage"];
+      $name = $product["name"];
+      $price = $product["price"];
+      $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
+      $i++;
+    }
+
+  return $array_product;
+  }
 
   ////CATEGORY SIDE/////
 
 
-public function getCategories(){
-  $stmt = $this->db->prepare("SELECT * FROM category");
-  $stmt->execute();
-  $result = $stmt->get_result();
-  $result->fetch_all(MYSQLI_ASSOC);
+  public function getCategories(){
+    $stmt = $this->db->prepare("SELECT * FROM category");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
 
-  return $result;
-}
+    return $result;
+  }
 
+  public function getMacrocategories(){
+    $stmt = $this->db->prepare("SELECT * FROM macrocategory");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
 
+    return $result;
+  }
+
+  public function getCategoriesByMacro($idMacro){
+    $stmt = $this->db->prepare("SELECT * FROM category WHERE idMacro = ?");
+    $stmt->bind_param("i", $idMacro);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+
+    return $result;
+  }
 }
 ?>
