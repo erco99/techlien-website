@@ -32,12 +32,12 @@ else {
                </div>
                <div class="row" style=" margin: 10px 10px; border-style: solid; border-color:green;">
                   <div class="col-lg-2 col-xs-4 form-title">
-                     <div class="home-products">
+                     <div class="products-align">
                         <?php	if(count(explode(";", $product["urlimage"])) > 1){
                            require_once("template_carouselproduct.php");
                         }
                         else{ ?>
-                           <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="">
+                           <img class="products-align" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="">
                         <?php } ?>
                      </div>
                   </div>
@@ -100,7 +100,7 @@ else {
                         <tbody>
                            <tr>
                               <td class="col-xs-4 form-title">
-                                 <div class="media">
+                                 <div class="products-align">
                                     <?php	if(count(explode(";", $product["urlimage"])) > 1){
                                        require_once("template_carouselproduct.php");
                                     }
@@ -179,7 +179,7 @@ else {
                </div>
                <div class="row" style=" margin: 10px 10px; border-style: solid; border-color:green;">
                   <div class="col-lg-2 col-xs-4 form-title">
-                     <div class="home-products">
+                     <div class="products-align">
                         <?php	if(count(explode(";", $product["urlimage"])) > 1){
                            require_once("template_carouselproduct.php");
                         }

@@ -28,6 +28,6 @@ else{
   (int)$_POST["stockProduct"], $_SESSION["id"], (int)$_POST["categoryProduct"], $_FILES["fileToUpload"]["name"]);
 
 
-  header("Location:/unibowebsite/profile.php?order");
+  header("Location:/unibowebsite/profile.php?");
 }
 ?>
