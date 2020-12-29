@@ -43,7 +43,7 @@
               <div class="col-lg-4 form-title">
                 <h3 >Are you new to Techlien ?</h3>
               <div class="form-title">
-                  <input type="button" href value="CREATE A NEW ACCOUNT" onclick="window.location='login.php?create_account';" class="btn btn-success float-right" style="margin-bottom:80px;" />
+                  <input type="button" value="CREATE A NEW ACCOUNT" onclick="window.location='login.php?create_account';" class="btn btn-success float-right" style="margin-bottom:80px;" />
                 </div>
               </div>
             </div>
@@ -55,5 +55,4 @@
 
     </div>
   </div>
-</div>
 </div>
