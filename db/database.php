@@ -158,7 +158,7 @@ class DatabaseHelper{
     $result = $stmt->get_result();
     $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
-    return $result[0];
+    return $result;
   }
 
   public function getProductByCat($idMacro, $idCat){

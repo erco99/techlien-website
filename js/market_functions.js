@@ -1,3 +1,10 @@
+function added(){
+    let btn = document.getElementById("btn_add");
+    btn.setAttribute("class", "btn btn-success");
+    btn.children[0].setAttribute("class", "glyphicon glyphicon-ok");
+    //ADD TO DB
+}
+
 function deleteFromCart(idproduct, iduser){
   console.log("P:"+idproduct + " U:"+iduser);
 }

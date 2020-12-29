@@ -292,7 +292,11 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                                  <input type="text" name="pricetext" class="label-info" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" ></input>
                               </div>
                               <div class"col-xs-12 text-right">
-                                 <button id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                                 <button type="button" id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                                    <span class="glyphicon glyphicon-remove-sign"></span> Cancel
+                                 </button>
+                              <div class"col-xs-12 text-right">
+                                 <button type="submit" id="btn_editproduct" class="btn btn-default btn-md pull-right">
                                     <span class="glyphicon glyphicon-ok"></span> Confirm
                                  </button>
                               </div>
