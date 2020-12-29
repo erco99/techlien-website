@@ -62,10 +62,10 @@
                     <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="mobile-logo"></a>
                 </div>
                 <div class="col-xs-2">
-                    <img src="img/icons/login.png" alt="login">
+                    <a href="login.php"><img src="img/icons/login.png" alt="login"></a>
                 </div>
                 <div class="col-xs-2">
-                    <img src="img/icons/cart.png" alt="cart">
+                    <a href="cart.php"><img src="img/icons/cart.png" alt="cart"></a>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
                 <div id="first" class="collapse">
                     <hr/>
                     <div class="row">
-                        <a href="#"><h4>Account</h4></a>
+                        <a href="profile.php"><h4>Account</h4></a>
                     </div>
                     <hr/>
                     <div class="row">
@@ -177,8 +177,8 @@
                 </div>
             </div>
             <div class="row last-row">
-                    <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
-                </div>
+                <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
+            </div>
         </footer>
     </div>
 

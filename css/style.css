@@ -34,7 +34,7 @@ body {
 
 }
 
-.row-full-height > div > img{
+.row-full-height > div > a > img{
     height: 65px;
     padding-top: 25px;
 }
@@ -210,7 +210,7 @@ div#second > hr{
 }
 
 .last-row{
-    padding: 60px 0px;
+    padding: 60px 5px;
     text-align: center;
     background-color: black;
     color: white;
