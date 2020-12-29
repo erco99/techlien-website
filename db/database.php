@@ -150,6 +150,17 @@ class DatabaseHelper{
     $stmt->close();
   }
 
+  public function getProductFromId($id){
+    $stmt = $this->db->prepare("SELECT * FROM product where id= ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
+    return $result[0];
+  }
+
   public function getProductByCat($idMacro, $idCat){
     $stmt = $this->db->prepare("SELECT p.name, p.price, p.urlimage
       FROM product p, category c, macrocategory m

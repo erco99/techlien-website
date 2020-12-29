@@ -7,6 +7,9 @@ else {
    foreach ($order as $product) :
       ?>
 
+<?php
+$prod_page = "/unibowebsite/product.php?id=".$product["id"];
+ ?>
                                                       <!-- WATCH PRODUCT -->
 
 
@@ -42,7 +45,7 @@ else {
                      </div>
                   </div>
                   <div class="col-lg-4 col-xs-2 text-center" >
-                     <h4><strong><?php echo $product["name"] ?></strong></h4>
+                     <h4><a href="<?php echo $prod_page; ?>"><strong><?php echo $product["name"] ?></strong></a></h4>
                      <h5><?php echo $product["description"] ?></h5>
                   </div>
                   <div class="col-lg-6"></div>
@@ -112,7 +115,7 @@ else {
                               <td class="col-xs-4 text-left">
 
                                  <div class="col-xs-12">
-                                    <h5><strong><?php echo $product["name"] ?></strong></h5>
+                                    <h5><a href="<?php echo $prod_page; ?>"><strong><?php echo $product["name"] ?></a></strong></h5>
                                  </div>
                                  <div class="col-xs-12">
                                     <h5><?php echo $product["description"] ?></h5>
@@ -210,10 +213,10 @@ else {
                         <input type="text" name="pricetext" class="label-info" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" ></input>
                      </div>
                      <div class"col-xs-12 text-right">
-                        <button id="btn_undoproduct_<?php echo $product["id"] ?>" class="btn btn-warning btn-lg pull-left" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                        <button  type="button" class="btn btn-warning btn-lg pull-left" onclick="editProductToSell(<?php echo $product["id"] ?>)">
                            <span class="glyphicon glyphicon-remove-sign"></span> Cancel
                         </button>
-                        <button type="submit" id="btn_confirmproduct_<?php echo $product["id"] ?>" class="btn btn-success btn-lg pull-right" >
+                        <button type="submit" class="btn btn-success btn-lg pull-right" >
                            <span class="glyphicon glyphicon-ok"></span> Confirm
                         </button>
                      </div>
