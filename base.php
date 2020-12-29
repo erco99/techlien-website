@@ -28,12 +28,12 @@
                     </div>
                 </div>
                 <div class="row row-header">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" id="logo-big">
                         <div class="text-center">
-                            <a href="home.php"><img src="img/icons/logo.svg" alt="logo" height="70px"></a>
+                            <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="logo"></a>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 cart-big" id="cart-big">
                         <div class="text-center link-distancing">
                             <a href="shop.php">Shop</a>
                             <?php
@@ -45,7 +45,7 @@
                             }
                             ?>
                             <a href="#">Contact</a>
-                            <a href="cart.php"><img src="img/icons/cart.svg" alt="cart" height="30px"></a>
+                            <a href="cart.php"><img src="img/icons/cart.png" alt="cart" height="45px"></a>
                         </div>
                     </div>
                 </div>
@@ -59,13 +59,13 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="logo"></a>
+                    <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="mobile-logo"></a>
                 </div>
                 <div class="col-xs-2">
-                    <img src="img/icons/login.svg" alt="login">
+                    <img src="img/icons/login.png" alt="login">
                 </div>
                 <div class="col-xs-2">
-                    <img src="img/icons/cart.svg" alt="cart">
+                    <img src="img/icons/cart.png" alt="cart">
                 </div>
             </div>
 
@@ -80,18 +80,24 @@
                         <a href="shop.php"><h4>Shop</h4></a>
                         <a href="#" data-toggle="collapse" data-target="#second"><h4 id="plus">+</h4></a>
                         <div id="second" class="collapse">
-                            <h5><strong>Hardware</strong></h5>
-                            <p><a href="#">Laptop</a></p>
-                            <p><a href="#">Cuffie</a></p>
-                            <hr/>
-                            <h5><strong>Software</strong></h5>
-                            <p><a href="#">Laptop</a></p>
-                            <p><a href="#">Cuffie</a></p>
-                            <hr/>
-                            <h5><strong>Gaming</strong></h5>
-                            <p><a href="#">Laptop</a></p>
-                            <p><a href="#">Cuffie</a></p>
-                        </div>
+                            <?php $templateParams["macrocategories"    ] = $dbh->getMacrocategories(); ?>
+                            <?php foreach($templateParams["macrocategories"] as $macrocategory) : ?>
+                                <?php $macro = $macrocategory["id"];
+                                $templateParams["categories"] = $dbh->getCategoriesByMacro($macro);;
+                                ?>
+                                <h5>
+                                    <strong><?php echo $macrocategory["name"]; ?></strong>
+                                </h5>
+                                <?php foreach($templateParams["categories"] as $category): ?>
+                                <p>
+                                    <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"]?>&categoryid=<?php echo $category["id"] ;?>">
+                                        <?php echo $category["name"]?>
+                                    </a>
+                                </p>
+                                <?php endforeach; ?>
+                                <?php $i++;
+                                if($i != 3){ echo "<hr/>"; } ?>
+                            <?php endforeach; ?>
                     </div>
                     <hr/>
                 </div>
@@ -163,3 +169,4 @@
     <script src="js/general_functions.js"></script>
 </body>
 </html>
+

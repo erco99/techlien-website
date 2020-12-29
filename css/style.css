@@ -25,7 +25,7 @@ body {
 
 .row-full-height > div{
     display: block;
-    height: 80px;
+    height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -35,15 +35,37 @@ body {
 }
 
 .row-full-height > div > img{
-    height: 35px;
+    height: 65px;
+    padding-top: 25px;
+}
+
+.home-mobile .col-xs-2{
+    width: 12%
+}
+
+.home-mobile .col-xs-6{
+    width: 61%;
 }
 
 #logo{
-    height: 50px;
+    height: 125px;
+    padding-bottom: 45px;
+}
+
+#mobile-logo{
+    height: 70px;
+}
+
+#logo-big{
+    width: 45%;
+}
+
+#cart-big{
+    width: 55%;
 }
 
 .row-header{
-    padding: 20px 0;
+    padding: 30px 0 0;
     display: flex;
     align-items: center;
 }
@@ -153,7 +175,7 @@ div.form-text > label, button{
 } 
 
 .home-mobile button{
-    margin: 0px;
+    margin-top: 40px;
 }
 
 .menu-options{
