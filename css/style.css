@@ -155,3 +155,33 @@ div.form-text > label, button{
 .home-mobile button{
     margin: 0px;
 }
+
+.menu-options{
+    padding: 5px 0 15px;
+}
+
+.menu-options h4{
+    display: inline-block;
+}
+
+.menu-options > div > hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 92%;
+    border-top: 1px solid #d9d6d6;
+}
+
+div#second > hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60%;
+    border-top: 1px solid #d9d6d6;
+}
+
+.menu-options > div > div >a{
+    color: green;
+}
+
+.menu-options a:hover{
+    color: black;
+}

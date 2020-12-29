@@ -62,19 +62,31 @@
                     </div>
                 </div>
 
-                <div class="row visible-xs">
+                <div class="row visible-xs text-center menu-options">
                     <div id="first" class="collapse">
-                        <p>
-                            <a href="#">Account</a>
-                        </p>
-                        <p>
-                            <a href="#" data-toggle="collapse" data-target="#second">
-                                Shop
-                            </a>
+                        <hr/>
+                        <div class="row">
+                            <a href="#"><h4>Account</h4></a>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <a href="shop.php"><h4>Shop</h4></a>
+                            <a href="#" data-toggle="collapse" data-target="#second"><h4 id="plus">+</h4></a>
                             <div id="second" class="collapse">
-                                something
+                                <h5><strong>Hardware</strong></h5>
+                                <p><a href="#">Laptop</a></p>
+                                <p><a href="#">Cuffie</a></p>
+                                <hr/>
+                                <h5><strong>Software</strong></h5>
+                                <p><a href="#">Laptop</a></p>
+                                <p><a href="#">Cuffie</a></p>
+                                <hr/>
+                                <h5><strong>Gaming</strong></h5>
+                                <p><a href="#">Laptop</a></p>
+                                <p><a href="#">Cuffie</a></p>
                             </div>
-                        </p>
+                        </div>
+                        <hr/>
                     </div>
                 </div>             
 
