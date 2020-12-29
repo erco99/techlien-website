@@ -84,12 +84,13 @@ body {
 }
 
 .footer-sm-style{
-    background-color: rgb(4, 85, 4);
+    background-color: #306c05;
     text-align: center;
-    color: white;
+    color: rgb(219 231 226);
+    padding: 40px 0 40px;
 }
 
-.footer-sm-style > div > a{
+.footer-sm-style > div > p >a{
     color: white;
 }
 
@@ -206,4 +207,11 @@ div#second > hr{
 
 .menu-options a:hover{
     color: black;
+}
+
+.last-row{
+    padding: 60px 0px;
+    text-align: center;
+    background-color: black;
+    color: white;
 }

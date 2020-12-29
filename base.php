@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-    <title> WEBSITE - An electronic e-commerce</title>
+    <title> TECHLIEN - An electronic e-commerce website</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -125,7 +125,15 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
-                                this website bla bla
+                            <p>
+                                <a href="#">About us</a>
+                            </p>
+                            <p>
+                                <a href="#">Contact</a>
+                            </p>
+                            <p>
+                                <a href="#">Technical information</a>
+                            </p>
                             </div>
                         </div>
                     </div>
@@ -139,22 +147,38 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                Altra
+                            <p>
+                                <a href="#">The story</a>
+                            </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row hidden-xs footer-sm-style">
-                <div class="text-center">
-                    <h4>Information</h4>
-                    <a href="#">Contact</a>
+                <div class="row text-center">
+                    <h3><strong>Information</strong></h3>
+                    <p>
+                        <a href="#">About us</a>
+                    </p>
+                    <p>
+                        <a href="#">Contact</a>
+                    </p>
+                    <p>
+                        <a href="#">Technical information</a>
+                    </p>
 
                     <hr width="15%">
-                    <h4>Altro</h4>
-                    <a href="#">Contact</a>
+
+                    <h3><strong>Altro</strong></h3>
+                    <p>
+                        <a href="#">The story</a>
+                    </p>
                 </div>
             </div>
+            <div class="row last-row">
+                    <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
+                </div>
         </footer>
     </div>
 
