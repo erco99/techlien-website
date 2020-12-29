@@ -215,3 +215,10 @@ div#second > hr{
     background-color: black;
     color: white;
 }
+
+.mobile-banner{
+    padding: 10px 0 5px;
+    background-color: black;
+    text-align: center;
+    color: rgb(245, 227, 227);
+}

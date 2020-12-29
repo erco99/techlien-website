@@ -23,7 +23,7 @@
                         <div class="text-right">
                             <a href="login.php">Login</a>
                             &nbsp-&nbsp
-                            <a href="template_register.php">Create account</a>
+                            <a href="login.php?create_account">Create account</a>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,11 @@
                     </div>
                 </div>
             </div>
+            <div class="row visible-xs mobile-banner">
+                <marquee behavior="scroll" direction="left">Advanced electronic marketplace</marquee>
+            </div>
             <div class="row row-full-height visible-xs home-mobile">
-
+                
                 <div class="col-xs-2 home-mobile">
                     <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#first">
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
