@@ -1,4 +1,5 @@
 /*CREA DATABASE*/
+
 CREATE DATABASE `dbwebsite`;
 
 /*CREA TABELLE*/
@@ -102,8 +103,8 @@ INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`,`password`, `tok
 
 INSERT INTO `macrocategory`(`name`) VALUES
 ("hardware"),
-("software", 1),
-("gaming", 3);
+("software"),
+("gaming");
 
 
 INSERT INTO `category`(`name`, `idmacro`) VALUES
