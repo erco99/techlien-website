@@ -25,6 +25,7 @@ body {
 
 .row-full-height{
     padding-bottom: 10px;
+    margin-top: -10px;
 }
 
 .row-full-height > div{
