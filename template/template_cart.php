@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST["btn_trash"]) && isset($_POST["id_product"])){
+$dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
+}
+ ?>
+
 
 <div class="container">
 	<div class="row">
@@ -14,7 +20,7 @@
 				</div>
 				<div class="panel-body">
 					<?php
-					$result = $dbh -> getCart($_GLOBAL["idUser"]);
+					$result = $dbh -> getCart($_SESSION["id"]);
 					foreach ($result as $product): ?>
 					<div class="row">
 
@@ -25,12 +31,12 @@
 								require_once("template_carouselproduct.php");
 							}
 							else{ ?>
-								<img class="img-thumbnail visible-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:400px;">
-								<img class="img-thumbnail hidden-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;">
+								<img class="products-align visible-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:400px;">
+								<img class="products-align hidden-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;">
 							<?php } ?>
 						</div>
 
-						<div class="col-xs-4" style="float:right;">
+						<div class="col-xs-8 text-left" style="float:right;">
 							<h4 class="product-name"><strong><?php echo $product["name"] ?></strong></h4>
 							<h4><small><?php echo $product["description"] ?></small></h4>
 						</div>
@@ -54,11 +60,14 @@
 							<div class="col-xs-4">
 								<input type="text" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
 							</div>
+							<form method="POST">
 							<div class="col-xs-12">
-								<button type="button" class="btn btn-link btn-xs float-right" style="float:right;" onclick="deleteFromCart(<?php echo $product["id"].',' .$_SESSION["id"]; ?>)">
+								<input type="hidden" name="id_product" value="<?php $product["id"]?>"</input>
+								<button name="btn_trash" type="button" class="btn btn-link btn-xs float-right" style="float:right;">
 									<span class="glyphicon glyphicon-trash"> </span>
 								</button>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>

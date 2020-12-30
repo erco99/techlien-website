@@ -54,7 +54,7 @@
                 <h7>Advanced electronic marketplace</h7>
             </div>
             <div class="row row-full-height visible-xs home-mobile">
-                
+
                 <div class="col-xs-3 ">
                     <button type="button" class="btn-menu" data-toggle="collapse" data-target="#first">
                         <img src="img/icons/menu.png" alt="menu">
@@ -196,4 +196,3 @@
     <script src="js/general_functions.js"></script>
 </body>
 </html>
-

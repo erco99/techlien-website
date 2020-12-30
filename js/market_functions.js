@@ -1,9 +1,22 @@
 function added(){
     let btn = document.getElementById("btn_add");
     btn.setAttribute("class", "btn btn-success");
-    btn.children[0].setAttribute("class", "glyphicon glyphicon-ok");
-    //ADD TO DB
+    btn.children[0].setAttribute("class", "glyphicon glyphicon-remove");
+    btn.children[0].setAttribute("name", "btn_remove");
+
+    btn.style.display = "none";
+
 }
+
+function dropped(){
+    let btn = document.getElementById("btn_remove");
+    btn.setAttribute("class", "btn btn-info");
+    btn.children[0].setAttribute("class", "glyphicon glyphicon-ok");
+
+    btn.style.display = "none";
+}
+
+
 
 function deleteFromCart(idproduct, iduser){
   console.log("P:"+idproduct + " U:"+iduser);
