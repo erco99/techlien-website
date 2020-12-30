@@ -5,7 +5,9 @@ if(empty($order)){
 }
 elseif(isset($_POST["id_remove"]) && isset($_POST["btn_remove"])){
    $dbh -> removeProduct($_POST["id_remove"]);
-   
+   //Header problem 
+   //header("Location:/unibowebsite/profile.php");
+
 }
 else{
    foreach ($order as $product) :

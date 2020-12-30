@@ -1,7 +1,8 @@
 <?php
 if(isset($_POST["btn_trash"])){
 $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
-header('Refresh: 1');
+//Header problem
+//header("Location:/unibowebsite/profile.php");
 }
  ?>
 
