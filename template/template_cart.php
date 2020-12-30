@@ -1,6 +1,7 @@
 <?php
-if(isset($_POST["btn_trash"]) && isset($_POST["id_product"])){
+if(isset($_POST["btn_trash"])){
 $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
+header('Refresh: 1');
 }
  ?>
 
@@ -48,9 +49,15 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 								<input type="text" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
 							</div>
 							<div class="col-xs-2">
-								<button type="button" class="btn btn-link btn-xs" onclick="delete()">
-									<span class="glyphicon glyphicon-trash"> </span>
-								</button>
+								<form method="POST">
+								<div class="col-xs-12">
+									<input type="hidden" name="id_product" value="<?php $product["id"]?>"</input>
+									<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
+										<span class="glyphicon glyphicon-trash"> </span>
+									</button>
+								</div>
+								</form>
+                </form>
 							</div>
 						</div>
 						<div class="col-xs-12 visible-xs"  style="margin-top:30px;">
@@ -63,7 +70,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 							<form method="POST">
 							<div class="col-xs-12">
 								<input type="hidden" name="id_product" value="<?php $product["id"]?>"</input>
-								<button name="btn_trash" type="button" class="btn btn-link btn-xs float-right" style="float:right;">
+								<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
 									<span class="glyphicon glyphicon-trash"> </span>
 								</button>
 							</div>

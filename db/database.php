@@ -151,6 +151,14 @@ class DatabaseHelper{
 
   }
 
+  public function removeProduct($id){
+    $stmt = $this->db->prepare("DELETE FROM `product` where id= ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->close();
+
+  }
+
   public function getProductFromId($id){
     $stmt = $this->db->prepare("SELECT * FROM product where id= ?");
     $stmt->bind_param("i", $id);

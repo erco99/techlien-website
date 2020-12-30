@@ -3,7 +3,11 @@ $order = $dbh -> getSelledProduct($_SESSION["id"]);
 if(empty($order)){
    echo '<p class="form-title">You have selled  nothing yet :(</p>';
 }
-else {
+elseif(isset($_POST["id_remove"]) && isset($_POST["btn_remove"])){
+   $dbh -> removeProduct($_POST["id_remove"]);
+   
+}
+else{
    foreach ($order as $product) :
       ?>
 
@@ -69,6 +73,14 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                         <button id="btn_editproduct" class="btn btn-default btn-lg pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
                            <span class="glyphicon glyphicon-pencil"></span> Edit product
                         </button>
+                        <form method="POST">
+                           <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"></input>
+
+                        <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-lg pull-left" >
+                           <span class="glyphicon glyphicon-remove-sign"></span> Remove product
+                        </button>
+
+                        </form>
                      </div>
                   </div>
                </div>
@@ -141,6 +153,12 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                                     <button id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
                                        <span class="glyphicon glyphicon-pencil"></span> Edit product
                                     </button>
+                                    <form method="POST">
+                                       <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"></input>
+                                    <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell(<?php echo $product["id"] ?>)">
+                                       <span class="glyphicon glyphicon-pencil"></span> Remove product
+                                    </button>
+                                    </form>
                                  </div>
 
                               </td>
