@@ -30,7 +30,7 @@
                 <div class="row row-header">
                     <div class="col-sm-6" id="logo-big">
                         <div class="text-center">
-                            <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="logo"></a>
+                            <a href="index.php"><img src="img/icons/logo.svg" alt="logo" id="logo"></a>
                         </div>
                     </div>
                     <div class="col-sm-6 cart-big" id="cart-big">
@@ -61,7 +61,7 @@
                     </button>
                 </div>
                 <div class="col-xs-6">
-                    <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="mobile-logo"></a>
+                    <a href="index.php"><img src="img/icons/logo.svg" alt="logo" id="mobile-logo"></a>
                 </div>
                 <div class="col-xs-3">
                     <a href="cart.php"><img src="img/icons/cart.png" alt="cart"></a>
