@@ -148,6 +148,7 @@ class DatabaseHelper{
     $stmt->bind_param("ssdiiis", $name, $description, $price, $stock, $iduser, $idcategory, $urlimage);
     $stmt->execute();
     $stmt->close();
+
   }
 
   public function getProductFromId($id){

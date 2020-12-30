@@ -11,7 +11,6 @@ else{
 
   $upload_dir = "../img/UPLOAD/";
   //UPLOAD image
-  //TODO mkdir permission denied. Resolve!!!
   //create dir of the user if it's the first upload for upload and profile photo
   if(isset($_FILES["fileToUpload"]["name"])){
     if(!is_dir($upload_dir.$_SESSION["id"])){
@@ -28,6 +27,6 @@ else{
   (int)$_POST["stockProduct"], $_SESSION["id"], (int)$_POST["categoryProduct"], $_FILES["fileToUpload"]["name"]);
 
 
-  header("Location:/unibowebsite/profile.php?");
+  header("Location:/unibowebsite/profile.php");
 }
 ?>
