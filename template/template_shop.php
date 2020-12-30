@@ -35,21 +35,21 @@
       <div class="products-align">
         <img src="<?php echo "img/home_images/".$product[$i]["urlimage"] ?>" alt="home_image">
         <h5><strong><?php echo $product[$i]["name"]?></strong></h5>
-        <h6><?php echo $product[$i]["price"]?></h6>
+        <h6>€<?php echo $product[$i]["price"]?></h6>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 products-align">
       <div class="products-align">
         <img src="<?php echo "img/home_images/".$product[$i + 1]["urlimage"] ?>" alt="home_image">
         <h5><strong><?php echo $product[$i + 1]["name"]?></strong></h5>
-        <h6><?php echo $product[$i + 1]["price"]?></h6>
+        <h6>€<?php echo $product[$i + 1]["price"]?></h6>
       </div>
     </div>
     <div class="col-xs-12 col-sm-4 products-align">
       <div class="products-align">
         <img src="<?php echo "img/home_images/".$product[$i + 2]["urlimage"] ?>" alt="home_image">
         <h5><strong><?php echo $product[$i + 2]["name"]?></strong></h5>
-        <h6><?php echo $product[$i + 2]["price"]?></h6>
+        <h6>€<?php echo $product[$i + 2]["price"]?></h6>
       </div>
     </div>
   </div>
