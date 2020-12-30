@@ -31,16 +31,16 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 								require_once("template_carouselproduct.php");
 							}
 							else{ ?>
-								<img class="products-align visible-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:400px;">
+								<img class=" visible-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:200px;">
 								<img class="products-align hidden-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;">
 							<?php } ?>
 						</div>
 
-						<div class="col-xs-8 text-left" style="float:right;">
+						<div class=" col-xs-4 text-center pull-right" style="float:right;">
 							<h4 class="product-name"><strong><?php echo $product["name"] ?></strong></h4>
 							<h4><small><?php echo $product["description"] ?></small></h4>
 						</div>
-						<div class="col-xs-6 hidden-xs" style="float:right;">
+						<div class="col-xs-6 hidden-xs " style="float:right; ">
 							<div class="col-xs-6 text-right">
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
@@ -53,7 +53,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 								</button>
 							</div>
 						</div>
-						<div class="col-xs-12 visible-xs" >
+						<div class="col-xs-12 visible-xs"  style="margin-top:30px;">
 							<div class="col-xs-2">
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
