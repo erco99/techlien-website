@@ -102,15 +102,39 @@ INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`,`password`, `tok
 ("Caio", "Rossi", "caio@gmail.com", "caio", "1234", 0);
 
 INSERT INTO `macrocategory`(`name`) VALUES
-("hardware"),
-("software"),
-("gaming");
+("Hardware"),
+("Software"),
+("Gaming");
 
 
 INSERT INTO `category`(`name`, `idmacro`) VALUES
-("categoria1", 1),
-("categoria2", 1),
-("categoria3", 3);
+("Laptop", 1),
+("Telefoni", 1),
+("Tablet", 1),
+("Kindle", 1),
+("Desktop", 1),
+("Cuffie", 1),
+("Laptop", 1),
+("Telefoni", 1),
+("Casse", 1),
+("Stampanti", 1),
+("Tastiere", 1),
+("Mouse", 1),
+("Webcam", 1),
+("Componenti interni", 1),
+("Altro", 2),
+("Sistemi operativi", 2),
+("Antivirus", 2),
+("Ufficio", 2),
+("Altro", 2),
+("Mouse", 3),
+("Laptop", 3),
+("Desktop", 3),
+("Complete setup", 3),
+("Tastiere", 3),
+("Console", 3),
+("Case", 3),
+("Altro", 3);
 
 INSERT INTO `product`(`name`, `description`, `price`,`stock`, `urlimage`, `iduser`, `idcategory`) VALUES
 ("prodotto1", "Questa è la descrizione del prodotto 1", 14.99, 100, "prova1.jpg", 1, 1),

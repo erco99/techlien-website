@@ -16,9 +16,11 @@
           <div class="well">
           <h3><?php echo $macrocategory["name"]; ?></h4>
           <?php foreach($templateParams["categories"] as $category): ?>
-            <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"]?>&categoryid=<?php echo $category["id"] ;?>">
-              <?php echo $category["name"]?>
-            </a>
+            <p>
+              <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"]?>&categoryid=<?php echo $category["id"] ;?>">
+                <?php echo $category["name"]?>
+              </a>
+            </p>
           <?php endforeach; ?>
           </div>
         </div>
