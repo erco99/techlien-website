@@ -45,7 +45,7 @@
                                 echo '<a href="/unibowebsite/login.php">Account</a>';
                             }
                             ?>
-                            <a href="cart.php"><img src="img/icons/cart.png" alt="cart" height="45px"></a>
+                            <a href="cart.php"><img src="img/icons/cart.png" alt="cart" id="cart"></a>
                         </div>
                     </div>
                 </div>

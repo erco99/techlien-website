@@ -62,6 +62,11 @@ body {
     line-height: 80px;
 }
 
+#cart{
+    margin-bottom: 10px;
+    height: 45px;
+}
+
 .row-header{
     padding: 30px 0 0;
     display: flex;
