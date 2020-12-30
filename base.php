@@ -36,45 +36,41 @@
                     <div class="col-sm-6 cart-big" id="cart-big">
                         <div class="text-center link-distancing">
                             <a href="shop.php">Shop</a>
+                            <a href="#">Contact</a>
                             <?php
                             if(isset($_SESSION["id"])){
                                 echo '<a href="/unibowebsite/profile.php">'.$_SESSION["username"].'</a>';
                             }
                             else{
-                                echo '<a href="/unibowebsite/login.php">Log in/Sign in</a>';
+                                echo '<a href="/unibowebsite/login.php">Account</a>';
                             }
                             ?>
-                            <a href="#">Contact</a>
                             <a href="cart.php"><img src="img/icons/cart.png" alt="cart" height="45px"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row visible-xs mobile-banner">
-                <marquee behavior="scroll" direction="left">Advanced electronic marketplace</marquee>
+                <h7>Advanced electronic marketplace</h7>
             </div>
             <div class="row row-full-height visible-xs home-mobile">
                 
-                <div class="col-xs-2 home-mobile">
-                    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#first">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                <div class="col-xs-3 ">
+                    <button type="button" class="btn-menu" data-toggle="collapse" data-target="#first">
+                        <img src="img/icons/menu.png" alt="menu">
                     </button>
                 </div>
-
                 <div class="col-xs-6">
                     <a href="home.php"><img src="img/icons/logo.svg" alt="logo" id="mobile-logo"></a>
                 </div>
-                <div class="col-xs-2">
-                    <a href="login.php"><img src="img/icons/login.png" alt="login"></a>
-                </div>
-                <div class="col-xs-2">
+                <div class="col-xs-3">
                     <a href="cart.php"><img src="img/icons/cart.png" alt="cart"></a>
                 </div>
             </div>
 
             <div class="row visible-xs text-center menu-options">
                 <div id="first" class="collapse">
-                    <hr/>
+                    </hr>
                     <div class="row">
                         <a href="profile.php"><h4>Account</h4></a>
                     </div>
@@ -101,8 +97,12 @@
                                 <?php $i++;
                                 if($i != 3){ echo "<hr/>"; } ?>
                             <?php endforeach; ?>
+                        </div>
                     </div>
                     <hr/>
+                    <div class="row">
+                        <a href="#"><h4>Logout</h4></a>
+                    </div>
                 </div>
             </div>
 

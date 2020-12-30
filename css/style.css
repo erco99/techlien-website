@@ -23,6 +23,10 @@ body {
     width: 50px;
 }
 
+.row-full-height{
+    padding-bottom: 10px;
+}
+
 .row-full-height > div{
     display: block;
     height: 100px;
@@ -35,17 +39,10 @@ body {
 }
 
 .row-full-height > div > a > img{
-    height: 65px;
-    padding-top: 25px;
+    height: 70px;
+    padding-top: 30px;
 }
 
-.home-mobile .col-xs-2{
-    width: 12%
-}
-
-.home-mobile .col-xs-6{
-    width: 61%;
-}
 
 #logo{
     height: 125px;
@@ -53,7 +50,7 @@ body {
 }
 
 #mobile-logo{
-    height: 70px;
+    height: 90px;
 }
 
 #logo-big{
@@ -62,6 +59,7 @@ body {
 
 #cart-big{
     width: 55%;
+    line-height: 80px;
 }
 
 .row-header{
@@ -93,6 +91,10 @@ body {
 .footer-sm-style > div > p >a{
     color: white;
 }
+
+.footer-xs-style > .panel-default > .panel-heading{
+    color:#057105;
+} 
 
 .home-subtitle{
     font-size: 35px;
@@ -201,8 +203,8 @@ div#second > hr{
     border-top: 1px solid #d9d6d6;
 }
 
-.menu-options > div > div >a{
-    color: green;
+.menu-options > div#first > div.row >a{
+    color: #057105;
 }
 
 .menu-options a:hover{
@@ -216,9 +218,56 @@ div#second > hr{
     color: white;
 }
 
-.mobile-banner{
-    padding: 10px 0 5px;
+/* moving text code */
+
+.mobile-banner {
+    height: 50px;  
+    overflow: hidden;
+    position: relative;
     background-color: black;
+}
+.mobile-banner h7 {
+    color: rgb(211, 202, 202);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
     text-align: center;
-    color: rgb(245, 227, 227);
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);  
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    -moz-animation: mobile-banner 15s linear infinite;
+    -webkit-animation: mobile-banner 15s linear infinite;
+    animation: mobile-banner 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes mobile-banner {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes mobile-banner {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes mobile-banner {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);     
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+}
+
+
+.btn-menu{
+    border-color: white;
+    background-color: white;
+    border-style: none;
 }
