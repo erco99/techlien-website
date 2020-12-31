@@ -1,6 +1,7 @@
 <?php
 
 require_once "../boot.php";
+
 // login form called this .php
 if(isset($_POST["login"])){
   $user = $dbh -> login($_POST["email"], $_POST["password"] );
