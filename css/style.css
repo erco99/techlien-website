@@ -80,7 +80,7 @@ body {
 }
 
 .link-distancing a:hover{
-    color: #077c40;
+    color: #275903;
 }
 
 .footer-xs-style{
@@ -88,7 +88,7 @@ body {
 }
 
 .footer-sm-style{
-    background-color: #306c05;
+    background-color: #275903;
     text-align: center;
     color: rgb(219 231 226);
     padding: 40px 0 40px;
@@ -152,11 +152,11 @@ div.form-text > label, button{
 
 .shop-nav{
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 .shop-nav .btn{
-    background-color: green;
+    background-color: #275903;
     border-color: black;
 }
 
@@ -210,7 +210,7 @@ div#second > hr{
 }
 
 .menu-options > div#first > div.row >a{
-    color: #057105;
+    color: #275903;
 }
 
 .menu-options a:hover{
@@ -280,4 +280,27 @@ div#second > hr{
 
 .product-spacing{
     margin-bottom: 50px;
+}
+
+.cart-panel{
+    padding: 100px 0;
+}
+
+.cart-panel .panel-heading{
+    padding: 20px 0;
+    color: white;
+    background-color: #275903;
+}
+
+.cart-panel .glyphicon{
+    font-size: 25px;
+}
+
+.cart-panel .panel-info{
+    border-color: black;
+}
+
+.cart-panel .btn-success{
+    background-color: #275903;
+    border: black;
 }

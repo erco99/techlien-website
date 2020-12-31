@@ -8,14 +8,15 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 
 
 <div class="container">
-	<div class="row">
+	<div class="row cart-panel">
 		<div class="col-xs-12">
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<div class="panel-title">
 						<div class="row">
-							<div class="col-xs-6">
-								<span class="glyphicon glyphicon-shopping-cart"></span> Il tuo carrello
+							<div class="col-xs-12 text-center" >
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<h3>Il tuo carrello</h3>
 							</div>
 						</div>
 					</div>
@@ -92,7 +93,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"], 1);
 					</div>
 					<div class="col-xs-3">
 						<button type="button" class="btn btn-default btn-sm btn-block">
-							Update cart
+							<h6>checkout</h6>
 						</button>
 					</div>
 				</div>
