@@ -38,7 +38,7 @@
     </div>
 </div>
 <h4 class="home-subtitle">Most Sold Products</h4>
-<?php for($i = 0; $i < $mostSoldLimit; $i = $i + 2): ?> 
+<?php for($i = 0; $i < $limit; $i = $i + 2): ?> 
 <div class="row">
     <div class="col-xs-12 col-sm-6 product-spacing">
         <div class="products-align">
@@ -47,7 +47,7 @@
             <h6>€<?php echo $product[$i]["price"]?></h6>
         </div>
     </div>
-    <?php if($mostSoldLimit != $i + 1) 
+    <?php if($limit != $i + 1) 
         {
             echo '<div class="col-xs-12 col-sm-6 product-spacing">
                 <div class="products-align">
@@ -60,3 +60,6 @@
      ?>
 </div>
 <?php endfor ;?>
+<?php if($limit == 0){
+       echo '<div class="row text-center" style="padding: 50px 0px 80px"><h2>No products yet</h2></div>';
+      }?>

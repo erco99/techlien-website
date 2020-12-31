@@ -58,5 +58,8 @@
       </div>';
     }
     ?>
-  </div>
-  <?php endfor ;?>
+</div>
+<?php endfor ;?>
+<?php if($limit == 0){
+       echo '<div class="row text-center" style="padding: 50px 0px 80px"><h2>No products yet</h2></div>';
+      }?>
