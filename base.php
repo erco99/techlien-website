@@ -77,7 +77,6 @@
 
             <div class="row visible-xs text-center menu-options">
                 <div id="first" class="collapse">
-                </hr>
                 <div class="row">
                     <?php
                     if(isset($_SESSION["id"])){
@@ -116,93 +115,93 @@
                 </div>
                 <hr/>
                 <div class="row">
-                    <?php
+                    <a href="#"><h4>Contact</h4></a>
+                </div>
+                <?php
                     if(isset($_SESSION["id"])){
-                        echo '  <a href="login.php?logout"><h4>Logout</h4></a>';
+                        echo '<hr/><div class="row"> <a href="login.php?logout"><h4>Logout</h4></a></div>';
                     }
-                    ?>
-                </div>
+                ?>
             </div>
-        </div>
+        </header>
 
+        <main>
+            <?php
+            if(isset($templateParams["file"])){
+                require($templateParams["file"]);
+            }
+            ?>
+        </main>
 
-    </header>
-    <main>
-        <?php
-        if(isset($templateParams["file"])){
-            require($templateParams["file"]);
-        }
-        ?>
-    </main>
-    <footer>
-        <div class="row visible-xs">
-            <div class="panel-group footer-xs-style" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                Information
-                            </a>
-                        </h4>
+        <footer>
+            <div class="row visible-xs">
+                <div class="panel-group footer-xs-style" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Information
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="#">About us</a>
+                                </p>
+                                <p>
+                                    <a href="#">Contact</a>
+                                </p>
+                                <p>
+                                    <a href="#">Technical information</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <p>
-                                <a href="#">About us</a>
-                            </p>
-                            <p>
-                                <a href="#">Contact</a>
-                            </p>
-                            <p>
-                                <a href="#">Technical information</a>
-                            </p>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Altro
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>
+                                    <a href="#">The story</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Altro
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <p>
-                                <a href="#">The story</a>
-                            </p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row hidden-xs footer-sm-style">
+                <div class="row text-center">
+                    <h3><strong>Information</strong></h3>
+                    <p>
+                        <a href="#">About us</a>
+                    </p>
+                    <p>
+                        <a href="#">Contact</a>
+                    </p>
+                    <p>
+                        <a href="#">Technical information</a>
+                    </p>
+
+                    <hr width="15%">
+
+                    <h3><strong>Altro</strong></h3>
+                    <p>
+                        <a href="#">The story</a>
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="row hidden-xs footer-sm-style">
-            <div class="row text-center">
-                <h3><strong>Information</strong></h3>
-                <p>
-                    <a href="#">About us</a>
-                </p>
-                <p>
-                    <a href="#">Contact</a>
-                </p>
-                <p>
-                    <a href="#">Technical information</a>
-                </p>
-
-                <hr width="15%">
-
-                <h3><strong>Altro</strong></h3>
-                <p>
-                    <a href="#">The story</a>
-                </p>
+            <div class="row last-row">
+                <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
             </div>
-        </div>
-        <div class="row last-row">
-            <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
 <!-- jQuery and Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
