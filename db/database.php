@@ -6,8 +6,8 @@ class DatabaseHelper{
 
   public function __construct(){
     //$this->db = new mysqli("db4free.net", "bububu1234", "332bd625", "websiteunibo");
-    //$this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
-    $this->db = new mysqli("localhost", "root", "", "dbwebsite");
+    $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
+    //$this->db = new mysqli("localhost", "root", "", "dbwebsite");
 
     if($this->db->connect_error){
       die("Connesione fallita al db");
@@ -255,6 +255,36 @@ class DatabaseHelper{
     $result->fetch_all(MYSQLI_ASSOC);
 
     return $result;
+  }
+
+  //USEFUL FUNCTIONS
+  public function getNumber($tableName){
+    $stmt = $this->db->prepare("SELECT COUNT(*) as num FROM product");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+
+    foreach($result as $r){
+      $num = $r["num"];
+    }
+     return $num;
+  }
+
+  public function getNumberByCat($macrocategory, $category){
+    $stmt = $this->db->prepare("SELECT COUNT(*) as num FROM product p, category c, macrocategory m
+    WHERE p.idcategory = ? and
+    p.idcategory = c.id and
+    c.idmacro = m.id and
+    m.id = ?");
+    $stmt->bind_param("ss", $category, $macrocategory);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+
+    foreach($result as $r){
+      $num = $r["num"];
+    }
+     return $num;
   }
 }
 ?>
