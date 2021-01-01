@@ -7,7 +7,9 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 
 
 <div class="container">
-	<form action="utils/checkout.php" method="POST">
+	<form id="checkoutForm" action="utils/checkout.php" method="POST"></form>
+		<form id="trashForm" method="POST"></form>
+
 	<div class="row cart-panel">
 		<div class="col-xs-12">
 			<div class="panel panel-info">
@@ -26,7 +28,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 					$result = $dbh -> getCart($_SESSION["id"]);
 					foreach ($result as $product): ?>
 					<div class="row">
-						<input type="hidden" name="id_prod[]" value="<?php echo $product["id"];?>">
+						<input type="hidden" form="checkoutForm" name="id_prod[]" value="<?php echo $product["id"];?>">
 
 						<!-- TODO fix this div with responsive mobile (don't work with visible-xs, find a solution) -->
 						<div class="col-xs-4">
@@ -48,17 +50,15 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
 							<div class="col-xs-4">
-								<input type="text" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>" />
+								<input type="text" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>" />
 							</div>
 							<div class="col-xs-2">
-								<form method="POST">
 								<div class="col-xs-12">
-									<input type="hidden" name="id_product" value="<?php echo $product["id"];?>">
-									<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
+									<input type="hidden" form="trashForm" name="id_product" value="<?php echo $product["id"];?>">
+									<button type="submit" name="btn_trash" form="trashForm" class="btn btn-link btn-xs float-right" style="float:right;">
 										<span class="glyphicon glyphicon-trash"> </span>
 									</button>
 								</div>
-								</form>
 							</div>
 						</div>
 						<div class="col-xs-12 visible-xs"  style="margin-top:30px;">
@@ -66,16 +66,14 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
 							<div class="col-xs-4">
-								<input type="text"  name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
+								<input type="text" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
 							</div>
-							<form method="POST">
 							<div class="col-xs-12">
-								<input type="hidden" name="id_product" value="<?php echo $product["id"];?>">
-								<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
+								<input type="hidden" form="trashForm" name="id_product" value="<?php echo $product["id"];?>">
+								<button type="submit" form="trashForm" name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
 									<span class="glyphicon glyphicon-trash"> </span>
 								</button>
 							</div>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -98,14 +96,14 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 					<h4 class="text-right">Total <strong>€ <?php echo $total ?></strong></h4>
 				</div>
 				<div class="col-xs-3">
-					<button type="submit" class="btn btn-success btn-block">
+					<button form="checkoutForm" class="btn btn-success btn-block">
 						Checkout
 					</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	</form>
+
 </div>
 </div>
 </div>
