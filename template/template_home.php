@@ -25,7 +25,7 @@
             </div>
         </div>
         </div>
-    
+
         <!-- Frecce destra e sinistra -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -38,21 +38,21 @@
     </div>
 </div>
 <h4 class="home-subtitle">Most Sold Products</h4>
-<?php for($i = 0; $i < $limit; $i = $i + 2): ?> 
+<?php for($i = 0; $i < $limit; $i = $i + 2): ?>
 <div class="row">
     <div class="col-xs-12 col-sm-6 product-spacing">
         <div class="products-align">
             <img src="<?php echo "img/home_images/".$product[$i]["urlimage"] ?>" alt="home_image">
-            <h5><strong><?php echo $product[$i]["name"]?></strong></h5>
+          <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>"  ><h5><strong><?php echo $product[$i]["name"]?></strong></h5></a>
             <h6>€<?php echo $product[$i]["price"]?></h6>
         </div>
     </div>
-    <?php if($limit != $i + 1) 
+    <?php if($limit != $i + 1)
         {
             echo '<div class="col-xs-12 col-sm-6 product-spacing">
                 <div class="products-align">
                 <img src="img/home_images/'.$product[$i+1]["urlimage"].'" alt="home_image">
-                    <h5><strong>'.$product[$i+1]["name"].'</strong></h5>
+                     <a href="/unibowebsite/product.php?id='.$product[$i+1]["id"].'"  ><h5><strong>'.$product[$i+1]["name"].'</strong></h5></a>
                     <h6>€'.$product[$i+1]["price"].'</h6>
                 </div>
             </div>';

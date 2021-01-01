@@ -123,7 +123,7 @@ class DatabaseHelper{
 
 
   public function mostSold($limit){
-    $stmt = $this->db->prepare("SELECT urlimage, name, price FROM product ORDER BY sold DESC limit ?");
+    $stmt = $this->db->prepare("SELECT urlimage, name, price, id FROM product ORDER BY sold DESC limit ?");
     $stmt->bind_param("i", $limit);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -132,10 +132,11 @@ class DatabaseHelper{
 
     $i = 0;
     foreach ($result as $product){
+      $id = $product["id"];
       $urlimage = $product["urlimage"];
       $name = $product["name"];
       $price = $product["price"];
-      $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
+      $array_product[$i] = array("id" => "$id", "urlimage" => "$urlimage","name" => "$name", "price" => "$price");
       $i++;
     }
 
@@ -171,7 +172,7 @@ class DatabaseHelper{
   }
 
   public function getProductByCat($idMacro, $idCat){
-    $stmt = $this->db->prepare("SELECT p.name, p.price, p.urlimage
+    $stmt = $this->db->prepare("SELECT p.id, p.name, p.price, p.urlimage
       FROM product p, category c, macrocategory m
       WHERE p.idcategory = ? and
       p.idcategory = c.id and
@@ -186,10 +187,11 @@ class DatabaseHelper{
 
     $i = 0;
     foreach ($result as $product){
+      $id = $product["id"];
       $urlimage = $product["urlimage"];
       $name = $product["name"];
       $price = $product["price"];
-      $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
+      $array_product[$i] = array("id" => "$id", "urlimage" => "$urlimage","name" => "$name", "price" => "$price");
       $i++;
     }
 
@@ -197,7 +199,7 @@ class DatabaseHelper{
   }
 
   public function getAllProducts(){
-    $stmt = $this->db->prepare("SELECT name, price, urlimage FROM product");
+    $stmt = $this->db->prepare("SELECT id,name, price, urlimage FROM product");
     $stmt->execute();
 
     $result = $stmt->get_result();
@@ -205,10 +207,11 @@ class DatabaseHelper{
 
     $i = 0;
     foreach ($result as $product){
+      $id = $product["id"];
       $urlimage = $product["urlimage"];
       $name = $product["name"];
       $price = $product["price"];
-      $array_product[$i] = array("urlimage" => "$urlimage","name" => "$name", "price" => "$price");
+      $array_product[$i] = array("id" => "$id","urlimage" => "$urlimage","name" => "$name", "price" => "$price");
       $i++;
     }
 
