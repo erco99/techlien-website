@@ -1,8 +1,10 @@
 <?php
 if(isset($_POST["btn_trash"])){
 $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
-
 }
+
+if(isset($_SESSION["id"]))
+{
 ?>
 
 
@@ -107,3 +109,10 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 </div>
 </div>
 </div>
+
+<?php
+}
+else{
+header("Location: /unibowebsite/login.php");
+}
+ ?>

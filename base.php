@@ -96,15 +96,15 @@
                         <?php $templateParams["macrocategories"    ] = $dbh->getMacrocategories(); ?>
                         <?php foreach($templateParams["macrocategories"] as $macrocategory) : ?>
                             <?php $macro = $macrocategory["id"];
-                            $templateParams["categories"] = $dbh->getCategoriesByMacro($macro);;
+                            $templateParams["categories"] = $dbh->getCategoriesByMacro($macro);
                             ?>
                             <h5>
                                 <strong><?php echo $macrocategory["name"]; ?></strong>
                             </h5>
                             <?php foreach($templateParams["categories"] as $category): ?>
                                 <p>
-                                    <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"]?>&categoryid=<?php echo $category["id"] ;?>">
-                                        <?php echo $category["name"]?>
+                                    <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"];?>&categoryid=<?php echo $category["id"] ;?>">
+                                        <?php echo $category["name"];?>
                                     </a>
                                 </p>
                             <?php endforeach; ?>

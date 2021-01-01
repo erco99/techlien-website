@@ -38,10 +38,13 @@ class DatabaseHelper{
 
 
   public function checkExistingEmail($email){
-    $stmt = $this->db->prepare("SELECT * FROM user where email=?");
+    $stmt = $this->db->prepare("SELECT * FROM `user` where email=?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
+    $row = mysqli_fetch_row($result);
+    $stmt->close();
+
     if(mysqli_fetch_lengths($result) >= 1){
       return true;
     }
@@ -107,6 +110,14 @@ class DatabaseHelper{
     $stmt->bind_param("iii", $idProduct, $idUser, $quantity);
     $stmt->execute();
     $stmt->close();
+
+    //change quantity in stock of product
+    $stmt = $this->db->prepare("UPDATE `product` SET stock=stock-? WHERE id= ?");
+    $stmt->bind_param("ii", $quantity, $idProduct);
+    $stmt->execute();
+    $stmt->close();
+
+
   }
 
   public function getOrders($idUser){
