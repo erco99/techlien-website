@@ -26,7 +26,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 					$result = $dbh -> getCart($_SESSION["id"]);
 					foreach ($result as $product): ?>
 					<div class="row">
-						<input type="hidden" name="id_prod[]" value="<?php echo $product["id"];?>"</input>
+						<input type="hidden" name="id_prod[]" value="<?php echo $product["id"];?>">
 
 						<!-- TODO fix this div with responsive mobile (don't work with visible-xs, find a solution) -->
 						<div class="col-xs-4">
@@ -53,7 +53,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 							<div class="col-xs-2">
 								<form method="POST">
 								<div class="col-xs-12">
-									<input type="hidden" name="id_product" value="<?php echo $product["id"];?>"</input>
+									<input type="hidden" name="id_product" value="<?php echo $product["id"];?>">
 									<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
 										<span class="glyphicon glyphicon-trash"> </span>
 									</button>
@@ -70,7 +70,7 @@ $dbh -> dropToCart($_POST["id_product"], $_SESSION["id"]);
 							</div>
 							<form method="POST">
 							<div class="col-xs-12">
-								<input type="hidden" name="id_product" value="<?php echo $product["id"];?>"</input>
+								<input type="hidden" name="id_product" value="<?php echo $product["id"];?>">
 								<button name="btn_trash" class="btn btn-link btn-xs float-right" style="float:right;">
 									<span class="glyphicon glyphicon-trash"> </span>
 								</button>
