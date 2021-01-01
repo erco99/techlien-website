@@ -1,11 +1,10 @@
 <div class="container">
-  <div class="row">
+  <div class="row login-box">
     <div class="box">
 
       <div class="col-lg-12 form-title">
-        <h1>Login</h1>
+        <h2>Login</h2>
       </div>
-      <hr>
       <div>
         <form action="utils/user_credential.php" method="POST">
           <div class="form-group centered">
@@ -26,24 +25,23 @@
             </div>
           </div>
           <div class="form-group centered">
-            <div class="col-sm-12">
-              <br>
+            <div class="col-sm-12 text-center login-buttons">
               <button type="submit" class="btn btn-primary hidden-xs enter-desktop">Enter</button>
               <button type="submit" class="btn btn-primary visible-xs enter-mobile">Enter</button>
             </div>
           </div>
-          <div>
-            <div>
-              <a href="#">Password dimenticata?</a>
+          <div class="row text-center">
+              <a href="#">Forgot your password?</a>
             </div>
+          <div class="row text-center">
             <div class="hidden-xs">
               <a href="login.php?create_account">Not registered yet? Click here.</a>
             </div>
-            <div class="visible-xs">
-              <div class="col-lg-4 form-title">
+            <div class="row visible-xs">
+              <div class="col-lg-4 text-center login-create-new">
                 <h3 >Are you new to Techlien ?</h3>
-              <div class="form-title">
-                  <input type="button" value="CREATE A NEW ACCOUNT" onclick="window.location='login.php?create_account';" class="btn btn-success float-right" style="margin-bottom:80px;" />
+              <div class="row">
+                  <input type="button" value="CREATE A NEW ACCOUNT" onclick="window.location='login.php?create_account';" class="btn btn-success float-right"/>
                 </div>
               </div>
             </div>

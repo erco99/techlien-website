@@ -1,5 +1,5 @@
 <div class="row text-center">
-  <h2>SHOP</h2>
+  <h2>Shop</h2>
 </div>
 <div class="row hidden-xs">
   <ul class="nav nav-pills nav-justified shop-nav">
