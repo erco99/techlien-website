@@ -102,9 +102,15 @@ class DatabaseHelper{
     $stmt->close();
   }
 
+  public function createOrder($idProduct, $idUser, $quantity){
+    $stmt = $this->db->prepare("INSERT INTO `orders` (`idproduct`, `idbuyer`,`quantity`) VALUES (?,?,?)");
+    $stmt->bind_param("iii", $idProduct, $idUser, $quantity);
+    $stmt->execute();
+    $stmt->close();
+  }
 
   public function getOrders($idUser){
-    $stmt = $this->db->prepare("SELECT DISTINCT p.*, o.*, u.username as uservendor FROM product p, orders o, user u where o.idbuyer = ? and o.idproduct = p.id and u.id = p.iduser");
+    $stmt = $this->db->prepare("SELECT DISTINCT p.*, o.idproduct, o.idbuyer, o.quantity, o.orderdate, o.tracknumber, u.username as uservendor FROM product p, orders o, user u where o.idbuyer = ? and o.idproduct = p.id and u.id = p.iduser");
     $stmt->bind_param("i", $idUser);
     $stmt->execute();
     $result = $stmt->get_result();

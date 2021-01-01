@@ -43,11 +43,11 @@ foreach($result as $product):
         <h5><?php echo $product["stock"] ?></h5>
       </div>
       <form method="POST">
-    
+
       <div class="col-lg-6">
         <p>Select quantity:<br/>
         <select name="quantity">
-          <?php for($i=0;$i<=10;$i++){
+          <?php for($i=1;$i<=10;$i++){
           echo '<option value="'.$i.'" >'.$i.'</option>';
             }
           ?>
