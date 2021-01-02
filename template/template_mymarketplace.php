@@ -71,8 +71,8 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                      <div class="col-xs-6" style="float: right;">
                         <h4><?php echo $product["price"] ?> €</h4>
                      </div>
-                     <div class"col-xs-12 text-right">
-                        <button id="btn_editproduct" class="btn btn-default btn-lg pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                     <div class="col-xs-12 text-right">
+                        <button id="btn_editproduct" class="btn btn-default btn-lg pull-right" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                            <span class="glyphicon glyphicon-pencil"></span> Edit product
                         </button>
                         <form method="POST">
@@ -151,13 +151,13 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                                  <div class="col-xs-12">
                                     <h5><?php echo $product["price"] ?> €</h5>
                                  </div>
-                                 <div class"col-xs-12 text-right">
-                                    <button id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                                 <div class="col-xs-12 text-right">
+                                    <button id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                                        <span class="glyphicon glyphicon-pencil"></span> Edit product
                                     </button>
                                     <form method="POST">
                                        <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"></input>
-                                    <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell(<?php echo $product["id"] ?>)">
+                                    <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
                                        <span class="glyphicon glyphicon-pencil"></span> Remove product
                                     </button>
                                     </form>
@@ -232,8 +232,8 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                      <div class="col-xs-6" style="float: right;">
                         <input type="text" name="pricetext" class="label-info" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" ></input>
                      </div>
-                     <div class"col-xs-12 text-right">
-                        <button  type="button" class="btn btn-warning btn-lg pull-left" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                     <div class="col-xs-12 text-right">
+                        <button  type="button" class="btn btn-warning btn-lg pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                            <span class="glyphicon glyphicon-remove-sign"></span> Cancel
                         </button>
                         <button type="submit" class="btn btn-success btn-lg pull-right" >
@@ -311,11 +311,11 @@ $prod_page = "/unibowebsite/product.php?id=".$product["id"];
                               <div class="col-xs-12">
                                  <input type="text" name="pricetext" class="label-info" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" ></input>
                               </div>
-                              <div class"col-xs-12 text-right">
-                                 <button type="button" id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell(<?php echo $product["id"] ?>)">
+                              <div class="col-xs-12 text-right">
+                                 <button type="button" id="btn_editproduct" class="btn btn-default btn-md pull-right" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                                     <span class="glyphicon glyphicon-remove-sign"></span> Cancel
                                  </button>
-                              <div class"col-xs-12 text-right">
+                              <div class="col-xs-12 text-right">
                                  <button type="submit" id="btn_editproduct" class="btn btn-default btn-md pull-right">
                                     <span class="glyphicon glyphicon-ok"></span> Confirm
                                  </button>
