@@ -89,8 +89,8 @@ else{
                      <table class="table table-condensed">
                         <thead>
                            <tr>
-                              <th class="text-center" headers="orderquantity">Quantity</th>
-                              <th class="text-center" headers="ordernumber"># sold</th>
+                              <th class="text-center" id="orderquantity">Quantity</th>
+                              <th class="text-center" id="ordernumber"># sold</th>
                            </tr>
                         </thead>
                         <tbody>
@@ -234,15 +234,15 @@ else{
                   <table class="table table-condensed">
                      <thead>
                         <tr>
-                           <th class="text-center" headers="orderquantity">Quantity</th>
-                           <th class="text-center" headers="ordernumber"># Solded</th>
+                           <th class="text-center" id="edit_orderquantity">Quantity</th>
+                           <th class="text-center" id="edit_ordersold"># Solded</th>
                         </tr>
                      </thead>
                      <tbody>
-                        <td class="col-sm-3 col-md-6 text-center" headers="orderquantity">
+                        <td class="col-sm-3 col-md-6 text-center" headers="edit_orderquantity">
                            <input type="text" name="stocktext" class="form-control" value="<?php echo $product["stock"]; ?>"/>
                         </td>
-                        <td class="col-sm-3 col-md-6 text-center" headers="ordersold">
+                        <td class="col-sm-3 col-md-6 text-center" headers="edit_ordersold">
                            <h5><?php echo $product["sold"]; ?></h5>
                         </td>
                      </tbody>

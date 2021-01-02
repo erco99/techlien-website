@@ -17,7 +17,7 @@ else {
             </div>
             <div class="col-lg-4 col-xs-4 form-title">
               <h3><b>Order Number</b></h3>
-              <h4><?php echo $product["id"]; ?></h4>
+              <h4><?php echo $product["idorder"]; ?></h4>
             </div>
             <div class="col-lg-4 col-xs-4 form-title">
               <h3><b>Selled by:</b></h3>
@@ -32,7 +32,7 @@ else {
                 require_once("template_carouselproduct.php");
               }
               else{ ?>
-                <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" class="img-thumbnail">
+                <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" class="img-thumbnail" />
               <?php } ?>
             </div>
           </div>
@@ -72,16 +72,16 @@ else {
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th class="text-center" headers="orderdate">Order date</th>
-                    <th class="text-center" headers="ordernumber">Order number</th>
+                    <th class="text-center" id="orderdateth_<?php echo $product["idorder"] ?>">Order date</th>
+                    <th class="text-center" id="ordernumberth_<?php echo $product["idorder"] ?>">Order number</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <td class="col-sm-3 col-md-6 text-center" headers="orderdate">
+                  <td class="col-sm-3 col-md-6 text-center" headers="orderdateth_<?php echo $product["idorder"] ?>">
                     <h5><?php echo date("d/M/y",strtotime($product["orderdate"])); ?></h5>
                   </td>
-                  <td class="col-sm-8 col-md-6 text-center" headers="ordernumber">
-                    <h5><?php echo $product["id"]; ?></h5>
+                  <td class="col-sm-8 col-md-6 text-center" headers="ordernumberth_<?php echo $product["idorder"] ?>">
+                    <h5><?php echo $product["idorder"]; ?></h5>
                   </td>
 
                 </tbody>
@@ -93,7 +93,7 @@ else {
                           require_once("template_carouselproduct.php");
                         }
                         else{ ?>
-                          <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" width="100px" height="100px">
+                          <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" width="100px" height="100px" />
                         <?php } ?>
                       </div>
                     </td>

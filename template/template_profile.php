@@ -10,13 +10,13 @@
         <img src="/unibowebsite/img/icons/profile.jpg" alt="profile photo"  style="max-width:100px;"/>
       </div>
       <div class="col-xs-6">
-        <label for="inputname"><?php echo $_SESSION["firstName"] ?></label>
+        <label><?php echo $_SESSION["firstName"] ?></label>
       </div>
       <div class="col-xs-6">
-        <label for="inputname"><?php echo $_SESSION["lastName"] ?></label>
+        <label><?php echo $_SESSION["lastName"] ?></label>
       </div>
       <div class="col-xs-12">
-        <label for="inputname"><?php echo $_SESSION["email"] ?></label>
+        <label><?php echo $_SESSION["email"] ?></label>
       </div>
     </div>
 
