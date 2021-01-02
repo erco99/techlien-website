@@ -176,16 +176,14 @@
                     </div>
                 </div>
             </div>
-            <div class="row hidden-xs footer-sm-style">
-                <div class="row text-center">
-                    <h3><strong>Information</strong></h3>
-                    <p><a href="#">About us</a></p>
-                    <p><a href="#">Contact</a></p>
-                    <p><a href="#">Technical information</a></p>
-                    <hr width="15%">
-                    <h3><strong>Altro</strong></h3>
-                    <p><a href="#">The story</a></p>
-                </div>
+            <div class="row hidden-xs text-center footer-sm-style">
+                <h3><strong>Information</strong></h3>
+                <p><a href="#">About us</a></p>
+                <p><a href="#">Contact</a></p>
+                <p><a href="#">Technical information</a></p>
+                <hr width="15%">
+                <h3><strong>Altro</strong></h3>
+                <p><a href="#">The story</a></p>
             </div>
             <div class="row last-row">
                 <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
