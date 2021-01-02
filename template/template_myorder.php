@@ -32,7 +32,7 @@ else {
                 require_once("template_carouselproduct.php");
               }
               else{ ?>
-                <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="">
+                <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" class="img-thumbnail">
               <?php } ?>
             </div>
           </div>
@@ -67,65 +67,64 @@ else {
     <div class="visible-xs" style="margin-top:10px;">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-10 col-md-offset-1" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
+            <div class="table-responsive" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
 
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th class="text-center" headers="orderdate">Order date</th>
-                  <th class="text-center" headers="ordernumber">Order number</th>
-                  <th class="text-center" headers="orderby">Selled by</th>
-                </tr>
-              </thead>
-              <tbody>
-                <td class="col-sm-3 col-md-6 text-center" headers="orderdate">
-                  <h5><?php echo date("d/M/y",strtotime($product["orderdate"])); ?></h5>
-                </td>
-                <td class="col-sm-8 col-md-6 text-center" headers="ordernumber">
-                  <h5><?php echo $product["id"]; ?></h5>
-                </td>
-                <td class="col-sm-3 col-md-6 text-center" headers="ordernumber">
-                  <h5><?php echo $product["uservendor"]; ?></h5>
-                </td>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td class="col-xs-4 form-title">
-                    <div class="media">
-                      <?php	if(count(explode(";", $product["urlimage"])) > 1){
-                        require_once("template_carouselproduct.php");
-                      }
-                      else{ ?>
-                        <img src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="" width="100px" height="100px">
-                      <?php } ?>
-                    </div>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th class="text-center" headers="orderdate">Order date</th>
+                    <th class="text-center" headers="ordernumber">Order number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <td class="col-sm-3 col-md-6 text-center" headers="orderdate">
+                    <h5><?php echo date("d/M/y",strtotime($product["orderdate"])); ?></h5>
                   </td>
-                  <td class="col-xs-4 text-left">
-
-                    <div class="col-xs-12">
-                      <h5><strong><?php echo $product["name"] ?></strong></h5>
-                    </div>
-                    <div class="col-xs-12">
-                      <h5>Quantity: <?php echo $product["quantity"] ?></h5>
-                    </div>
+                  <td class="col-sm-8 col-md-6 text-center" headers="ordernumber">
+                    <h5><?php echo $product["id"]; ?></h5>
                   </td>
-                  <td class="col-xs-6 text-right">
 
-                    <div class="col-xs-12">
-                      <span><b>Tracking #: </b></span>
-                    </div>
-                    <div class="col-xs-12">
-                      <h6><?php echo empty($product["tracknumber"]) ? 'NO TRACKING NUMBER' : $product["tracknumber"]; ?></h6>
-                    </div>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <td class="col-xs-4 form-title">
+                      <div class="media">
+                        <?php	if(count(explode(";", $product["urlimage"])) > 1){
+                          require_once("template_carouselproduct.php");
+                        }
+                        else{ ?>
+                          <img src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" width="100px" height="100px">
+                        <?php } ?>
+                      </div>
+                    </td>
+                    <td class="col-xs-4 text-left">
 
-                    <div class="col-xs-12">
-                      <h4><b>Total price</b></h4>
-                    </div>
+                      <div class="col-xs-12">
+                        <h5><strong><?php echo $product["name"] ?></strong></h5>
+                      </div>
+                      <div class="col-xs-12">
+                        <h5>Quantity: <?php echo $product["quantity"] ?></h5>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2 pull-right">
 
-                    <div class="col-xs-12">
-                      <h5><?php echo $product["price"] ?> €</h5>
-                    </div>
+                      <div class="col-xs-12">
+                        <span><b>Tracking #: </b></span>
+                      </div>
+                      <div class="col-xs-12">
+                        <h6><?php echo empty($product["tracknumber"]) ? 'NO TRACKING NUMBER' : $product["tracknumber"]; ?></h6>
+                      </div>
 
+                      <div class="col-xs-12">
+                        <h4><b>Total price</b></h4>
+                      </div>
+
+                      <div class="col-xs-12">
+                        <h5><?php echo $product["price"] ?> €</h5>
+                      </div>
+                    </tr>
                   </div>
                 </div>
               </td>
@@ -135,6 +134,6 @@ else {
       </div>
 
 
-<?php endforeach;
-}
-?>
+    <?php endforeach;
+  }
+  ?>
