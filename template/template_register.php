@@ -1,12 +1,11 @@
 <div class="container">
-
   <div class="row">
     <div class="box">
-
       <div class="col-lg-12 form-title">
         <h2>Register</h2>
       </div>
       <div>
+
         <form action="utils/user_credential.php" method="POST">
           <div class="form-group centered">
             <div class="col-md-6 mb-3 form-text">
@@ -59,20 +58,18 @@
                 <div class="row text-center"><a href="login.php">Already registered? Click here.</a></div>
               </div>
               <div class="visible-xs already-registered">
-                <div class="col-lg-4 form-title">
-                <h3 >Are you already registered to Techlien ?</h3>
-                  <div class="form-title">
-                <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
+                <div class="form-title">
+                  <h3 >Are you already registered to Techlien ?</h3>
+                    <div class="form-title">
+                      <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
+                    </div>
+                </div> 
               </div>
-              
-            </div>
-            
+            </div>          
           </div>
-        </div>
+        </form>
 
-          </form>
-
-        </div>
       </div>
     </div>
   </div>
+</div>
