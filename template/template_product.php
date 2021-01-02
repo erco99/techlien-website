@@ -28,7 +28,7 @@ foreach($result as $product):
             require_once("template_carouselproduct.php");
           }
           else{ ?>
-            <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" alt="" style="border-color:grey;">
+            <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" style="border-color:grey;">
           <?php } ?>
         </div>
       </div>
