@@ -111,9 +111,9 @@ class DatabaseHelper{
     $stmt->execute();
     $stmt->close();
 
-    //change quantity in stock of product
-    $stmt = $this->db->prepare("UPDATE `product` SET stock=stock-? WHERE id= ?");
-    $stmt->bind_param("ii", $quantity, $idProduct);
+    //change quantity in stock and sold of product
+    $stmt = $this->db->prepare("UPDATE `product` SET stock=stock-? and sold=sold+? WHERE id= ?");
+    $stmt->bind_param("iii", $quantity, $quantity, $idProduct);
     $stmt->execute();
     $stmt->close();
 
