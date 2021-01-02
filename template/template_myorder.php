@@ -20,8 +20,8 @@ else {
               <h4><?php echo $product["idorder"]; ?></h4>
             </div>
             <div class="col-lg-4 col-xs-4 form-title">
-              <h3><b>Selled by:</b></h3>
-              <h4><?php echo $product["uservendor"]; ?></h4>
+              <h3><b>Quantity: </b></h3>
+              <h4><?php echo $product["quantity"]; ?></h4>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ else {
               <h4><?php echo empty($product["tracknumber"]) ? 'NO TRACKING NUMBER' : $product["tracknumber"]; ?></h4>
             </div>
 
-            <div class="col-xs-6" style="float: right;">
+            <div class="col-xs-8" style="float: right;">
               <h3><b>Total price</b></h3>
             </div>
             <div class="col-xs-6" style="float: right;">
@@ -62,6 +62,13 @@ else {
 
       </div>
     </div>
+
+  <?php
+//if you delete this, in desktop will see only one product. idk why???
+ endforeach;
+  foreach ($order as $product) :
+
+?>
 
     <!-- MOBILE VERSION ORDERS -->
     <div class="visible-xs" style="margin-top:10px;">
