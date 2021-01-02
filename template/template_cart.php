@@ -107,8 +107,6 @@ if(isset($_SESSION["id"]))
 	</div>
 
 </div>
-</div>
-</div>
 
 <?php
 }

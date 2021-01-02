@@ -6,6 +6,11 @@ body {
     border-color: black;
 }
 
+.row-adjust{
+
+    margin-right: 0;
+}
+
 .info-bar{
     background-color: black;
     color: white;
@@ -110,7 +115,7 @@ body {
     padding: 40px 0 40px;
 }
 
-.footer-sm-style > div > p >a{
+.footer-sm-style > p >a{
     color: white;
 }
 
