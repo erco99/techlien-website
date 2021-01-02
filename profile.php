@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require_once 'boot.php';
 
 if(isset($_SESSION['username'])){
