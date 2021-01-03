@@ -2,7 +2,7 @@
 
 if(isset($_POST['btn_add'])){
   $btn_add = 'style="display:none;"';
-  $btn_drop = 'style="display:block;"';
+  $btn_drop = 'style="display:initial;"';
   $dbh->addToCart((int)$_GET["id"], $_SESSION["id"], $_POST["quantity"]);
 
 }
@@ -11,7 +11,7 @@ else {
     $dbh->dropToCart((int)$_GET["id"], $_SESSION["id"], $_POST["quantity"]);
 
   }
-  $btn_add = 'style="display:block;"';
+  $btn_add = 'style="display:initial;"';
   $btn_drop = 'style="display:none;"';
 }
 
@@ -70,7 +70,7 @@ foreach($result as $product):
               <?php
               if(isset($_SESSION["id"])){
                 echo '
-                <button  name="btn_add" id="btn_add" class="btn btn-info pull-right" '.$btn_add.'><span class="glyphicon glyphicon-plus">Add to Cart</span></button>
+                <button  name="btn_add" id="btn_add" class="btn btn-info " '.$btn_add.'><span class="glyphicon glyphicon-plus">Add to Cart</span></button>
                 <button name="btn_drop" id="btn_remove" class="btn btn-info" '.$btn_drop.'><span class="glyphicon glyphicon-remove">Remove to Cart</span></button>
                 ';
               }

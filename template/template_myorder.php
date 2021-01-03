@@ -66,13 +66,13 @@ else {
   <?php
 //if you delete this, in desktop will see only one product. idk why???
  endforeach;
-  foreach ($order as $product) :
 
 ?>
 
     <!-- MOBILE VERSION ORDERS -->
     <div class="visible-xs" style="margin-top:10px;">
       <div class="container">
+        <?php foreach ($order as $product) : ?>
         <div class="row">
             <div class="table-responsive" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
 

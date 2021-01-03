@@ -6,8 +6,8 @@ class DatabaseHelper{
 
   public function __construct(){
     //$this->db = new mysqli("db4free.net", "bububu1234", "332bd625", "websiteunibo");
-  //  $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
-    $this->db = new mysqli("localhost", "root", "", "dbwebsite");
+    $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
+  //  $this->db = new mysqli("localhost", "root", "", "dbwebsite");
 
     if($this->db->connect_error){
       die("Connesione fallita al db");
@@ -112,7 +112,7 @@ class DatabaseHelper{
     $stmt->close();
 
     //change quantity in stock and sold of product
-    $stmt = $this->db->prepare("UPDATE `product` SET stock=stock-? and sold=sold+? WHERE id= ?");
+    $stmt = $this->db->prepare("UPDATE `product` SET stock=stock-? , sold=sold+? WHERE id= ?");
     $stmt->bind_param("iii", $quantity, $quantity, $idProduct);
     $stmt->execute();
     $stmt->close();
