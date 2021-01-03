@@ -18,73 +18,76 @@ else {
 
 $result = $dbh -> getProductFromId($_GET["id"]);
 foreach($result as $product):
-  ?>
-  <div class="card">
+?>
 
-    <div class="row text-center" style=" margin: 40px 10px;">
-      <div class="col-lg-2 col-xs-4 form-title">
-        <div class="img-thumbnail">
-          <?php	if(count(explode(";", $product["urlimage"])) > 1){
-            require_once("template_carouselproduct.php");
-          }
-          else{ ?>
-            <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" style="border-color:grey;">
-          <?php } ?>
-        </div>
-      </div>
-      <div class="col-lg-4 col-xs-2 text-center" >
-        <h4><strong><?php echo $product["name"] ?></strong></h4>
-        <h5><?php echo $product["description"] ?></h5>
-      </div>
-      <div class="col-lg-6">
-        <h4>Remaining:</h4>
-      </div>
-      <div class="col-lg-6">
-        <h5><?php echo $product["stock"] ?></h5>
-      </div>
-      <form method="POST">
+<div class="card product-page">
 
-      <div class="col-lg-6">
-        <p>Select quantity:<br/>
-        <select name="quantity">
-          <?php for($i=1;$i<=10;$i++){
-          echo '<option value="'.$i.'" >'.$i.'</option>';
-            }
-          ?>
-
-        </select>
-        </p>
-      </div>
-
-      <div class="text-right pull-right">
-        <div class="col-xs-12">
-          <h3><b>Total price</b></h3>
-        </div>
-        <div class="col-xs-12">
-          <h4><?php echo $product["price"] ?> €</h4>
-        </div>
-          <div class="col-xs-12">
-            <?php
-            if(isset($_SESSION["id"])){
-              echo '
-              <button  name="btn_add" id="btn_add" class="btn btn-info pull-right" '.$btn_add.'><span class="glyphicon glyphicon-plus">Add to Cart</span></button>
-              <button name="btn_drop" id="btn_remove" class="btn btn-info pull-right" '.$btn_drop.'><span class="glyphicon glyphicon-remove">Remove to Cart</span></button>
-              ';
-            }
-            else{
-              echo '<a href="login.php"><h4 class="text-center">Loggati per aggiungere il prodotto al carrello.</h4></a>';
-            }
-             ?>
-
-          </div>
-        </form>
+  <div class="row text-center">
+    <div class="col-12 form-title">
+      <div class="img-thumbnail">
+        <?php	if(count(explode(";", $product["urlimage"])) > 1){
+          require_once("template_carouselproduct.php");
+        }
+        else{ ?>
+          <img class="img-thumbnail" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" style="border-color:grey;">
+        <?php } ?>
       </div>
     </div>
   </div>
 
 
+  <div class="row text-center">
+    <div class="col-12 text-center" >
+      <h3><strong><?php echo $product["name"] ?></strong></h3>
+      <h5><?php echo $product["description"] ?></h5>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-12">
+      <h4>Remaining:</h4>
+      <h5><?php echo $product["stock"] ?></h5>
+    </div>
+  </div>
+  <form method="POST"> 
+    <div class="row text-center">
+        <div class="col-12">
+          <p>Select quantity:
+          <select name="quantity">
+            <?php for($i=1;$i<=10;$i++){
+            echo '<option value="'.$i.'" >'.$i.'</option>';
+              }
+            ?>
+          </select>
+          </p>
+        </div>
+    
 
-  <?php
+      <div class="row text-center">
+        <div class="col-xs-12">
+          <h3><b>Total price</b></h3>
+          <h4><?php echo $product["price"] ?> €</h4>
+            <div class="row text-center add-to-cart">
+              <?php
+              if(isset($_SESSION["id"])){
+                echo '
+                <button  name="btn_add" id="btn_add" class="btn btn-info pull-right" '.$btn_add.'><span class="glyphicon glyphicon-plus">Add to Cart</span></button>
+                <button name="btn_drop" id="btn_remove" class="btn btn-info" '.$btn_drop.'><span class="glyphicon glyphicon-remove">Remove to Cart</span></button>
+                ';
+              }
+              else{
+                echo '<a href="login.php"><h4 class="text-center">Loggati per aggiungere il prodotto al carrello.</h4></a>';
+              }
+              ?>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<?php
 endforeach;
-
 ?>
