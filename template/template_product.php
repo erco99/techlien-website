@@ -48,19 +48,19 @@ foreach($result as $product):
       <h5><?php echo $product["stock"] ?></h5>
     </div>
   </div>
-  <form method="POST"> 
+  <form method="POST">
     <div class="row text-center">
         <div class="col-12">
           <p>Select quantity:
           <select name="quantity">
-            <?php for($i=1;$i<=10;$i++){
+            <?php for($i=1;$i<=10 && $i <= $product["stock"];$i++){
             echo '<option value="'.$i.'" >'.$i.'</option>';
               }
             ?>
           </select>
           </p>
         </div>
-    
+
 
       <div class="row text-center">
         <div class="col-xs-12">

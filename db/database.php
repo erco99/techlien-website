@@ -6,8 +6,8 @@ class DatabaseHelper{
 
   public function __construct(){
     //$this->db = new mysqli("db4free.net", "bububu1234", "332bd625", "websiteunibo");
-    $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
-  //  $this->db = new mysqli("localhost", "root", "", "dbwebsite");
+  //  $this->db = new mysqli("localhost", "root", "maria123erco123forl123##@@", "dbwebsite");
+    $this->db = new mysqli("localhost", "root", "", "dbwebsite");
 
     if($this->db->connect_error){
       die("Connesione fallita al db");
@@ -34,6 +34,17 @@ class DatabaseHelper{
     $stmt->bind_param("sssssi", $firstName, $lastName, $email, $username, $crypt, $token);
     $stmt->execute();
     $stmt->close();
+  }
+
+  public function getUserFromId($id){
+    $stmt = $this->db->prepare("SELECT username, email FROM user where id= ?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
+    return $result;
   }
 
 
@@ -188,6 +199,7 @@ class DatabaseHelper{
     $stmt->close();
     return $result;
   }
+
 
   public function getProductByCat($idMacro, $idCat){
     $stmt = $this->db->prepare("SELECT p.id, p.name, p.price, p.urlimage, p.iduser

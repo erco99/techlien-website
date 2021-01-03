@@ -21,7 +21,8 @@ else{
 
       <!-- DESKTOP VERSION -->
       <div id="watch-product_<?php echo $product["id"]; ?>" >
-         <div class="hidden-xs" >
+         <a name="myproduct_<?php echo $product["id"]; ?>"></a>
+         <div class="hidden-xs">
             <div class="card col-lg-12 col-xs-12" style=" margin: 10px 10px; border-style: solid; border-color:grey;" id="desktopwatch-product_<?php echo $product["id"] ?>">
                <div class="panel-title">
                   <div class="row">
@@ -82,6 +83,7 @@ else{
          </div>
          <!-- MOBILE VERSION  -->
          <div class="visible-xs"  >
+           <a name="myproduct_<?php echo $product["id"]; ?>"></a>
             <div class="container" id="mobilewatch-product_<?php echo $product["id"]; ?>">
                <div class="row">
                   <div class="table-responsive" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
