@@ -40,20 +40,20 @@
 <h4 class="home-subtitle">Most Sold Products</h4>
 <?php for($i = 0; $i < $limit; $i = $i + 2): ?>
 <div class="row">
-    <div class="col-xs-12 col-sm-6 product-spacing">
+    <div class="col-xs-12 col-sm-6 product-spacing product-padding-home">
         <div class="products-align">
             <img src="<?php echo "img/UPLOAD/".$product[$i]["idseller"]."/".$product[$i]["urlimage"] ?>" alt="home_image">
-          <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>"  ><h5><strong><?php echo $product[$i]["name"]?></strong></h5></a>
-            <h6>€<?php echo $product[$i]["price"]?></h6>
+          <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>"  ><h3><strong><?php echo $product[$i]["name"]?></strong></h3></a>
+            <h4>€<?php echo $product[$i]["price"]?></h4>
         </div>
     </div>
     <?php if($limit != $i + 1)
         {
-            echo '<div class="col-xs-12 col-sm-6 product-spacing">
+            echo '<div class="col-xs-12 col-sm-6 product-spacing product-padding-home">
                 <div class="products-align">
                 <img src="img/UPLOAD/'.$product[$i+1]["idseller"].'/'.$product[$i+1]["urlimage"].'" alt="home_image">
-                     <a href="/unibowebsite/product.php?id='.$product[$i+1]["id"].'"  ><h5><strong>'.$product[$i+1]["name"].'</strong></h5></a>
-                    <h6>€'.$product[$i+1]["price"].'</h6>
+                     <a href="/unibowebsite/product.php?id='.$product[$i+1]["id"].'"  ><h3><strong>'.$product[$i+1]["name"].'</strong></h3></a>
+                    <h4>€'.$product[$i+1]["price"].'</h4>
                 </div>
             </div>';
         }

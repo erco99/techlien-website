@@ -411,3 +411,22 @@ div#second > hr{
     border-color: black;
     font-size: 20px;
 }
+
+
+@media only screen and (max-width: 1350px){
+    .product-padding-home{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (min-width: 1351px){
+    .product-padding-home{
+        padding: 0 150px;
+    }
+}
+
+@media only screen and (max-width: 1350px){
+    .product-padding-shop{
+        padding: 20px 50px;
+    }
+}

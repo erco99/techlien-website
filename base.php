@@ -146,13 +146,13 @@
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     <p>
-                                        <a href="#">About us</a>
+                                        <a href="about.php">About us</a>
                                     </p>
                                     <p>
-                                        <a href="#">Contact</a>
+                                        <a href="contact.php">Contact</a>
                                     </p>
                                     <p>
-                                        <a href="#">Technical information</a>
+                                        <a href="techinfo.php">Technical information</a>
                                     </p>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     <p>
-                                        <a href="#">The story</a>
+                                        <a href="story.php">The story</a>
                                     </p>
                                 </div>
                             </div>
