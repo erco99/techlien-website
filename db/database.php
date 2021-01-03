@@ -190,7 +190,7 @@ class DatabaseHelper{
   }
 
   public function getProductByCat($idMacro, $idCat){
-    $stmt = $this->db->prepare("SELECT p.id, p.name, p.price, p.urlimage
+    $stmt = $this->db->prepare("SELECT p.id, p.name, p.price, p.urlimage, p.iduser
       FROM product p, category c, macrocategory m
       WHERE p.idcategory = ? and
       p.idcategory = c.id and
