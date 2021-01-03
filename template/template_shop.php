@@ -17,7 +17,7 @@
       <div class="row row-adjust">
         <div class="collapse collapse-category" id="<?php echo $macrocategory["name"]; ?>">
           <div class="well">
-            <h3><?php echo $macrocategory["name"]; ?></h4>
+            <h4><?php echo $macrocategory["name"]; ?></h4>
             <?php foreach($templateParams["categories"] as $category): ?>
               <p>
                 <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"]?>&categoryid=<?php echo $category["id"] ;?>">
@@ -37,16 +37,16 @@
   <div class="col-xs-12 col-sm-4 products-align product-padding-shop">
     <div class="products-align">
       <img src="<?php echo "img/UPLOAD/".$product[$i]["idseller"].'/'.$product[$i]["urlimage"] ?>" alt="home_image">
-        <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>" ><h3><strong><?php echo $product[$i]["name"]?></strong></h3></a>
-      <h4>€<?php echo $product[$i]["price"]?></h4>
+        <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>" ><h4><strong><?php echo $product[$i]["name"]?></strong></h4></a>
+      <h5>€<?php echo $product[$i]["price"]?></h5>
     </div>
   </div>
   <?php if($limit > $i + 1 ){
     echo '<div class="col-xs-12 col-sm-4 products-align product-padding-shop">
       <div class="products-align">
         <img src="img/UPLOAD/'.$product[$i+1]["idseller"].'/'.$product[$i+1]["urlimage"].'" alt="home_image">
-      <a href="/unibowebsite/product.php?id='.$product[$i + 1]["id"].' "> <h3><strong>'.$product[$i + 1]["name"].'</strong></h3></a>
-        <h4>€'.$product[$i + 1]["price"].'</h4>
+      <a href="/unibowebsite/product.php?id='.$product[$i + 1]["id"].' "> <h4><strong>'.$product[$i + 1]["name"].'</strong></h4></a>
+        <h5>€'.$product[$i + 1]["price"].'</h5>
       </div>
     </div>';
   }
@@ -55,8 +55,8 @@
     echo '<div class="col-xs-12 col-sm-4 products-align product-padding-shop">
       <div class="products-align">
         <img src="img/UPLOAD/'.$product[$i+2]["idseller"].'/'.$product[$i+2]["urlimage"].'" alt="home_image">
-        <a href="/unibowebsite/product.php?id='.$product[$i + 2]["id"].' "><h3><strong>'.$product[$i + 2]["name"].'</strong></h3></a>
-        <h4>€'.$product[$i + 2]["price"].'</h4>
+        <a href="/unibowebsite/product.php?id='.$product[$i + 2]["id"].' "><h4><strong>'.$product[$i + 2]["name"].'</strong></h4></a>
+        <h5>€'.$product[$i + 2]["price"].'</h5>
       </div>
     </div>';
   }

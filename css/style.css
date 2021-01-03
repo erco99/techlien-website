@@ -425,8 +425,14 @@ div#second > hr{
     }
 }
 
-@media only screen and (max-width: 1350px){
+@media only screen and (max-width: 767px){
     .product-padding-shop{
-        padding: 20px 50px;
+        padding: 40px 50px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .product-padding-shop{
+        padding: 40px 30px;
     }
 }
