@@ -29,6 +29,8 @@ else{
     require_once("confirmation_email.php");
     echo $_POST["email"];
     send_emailConfirm($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["username"], $_POST["password"]);
+    header( "refresh:3;url=/unibowebsite/login.php" );
+
     }
   }
  ?>
