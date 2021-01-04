@@ -29,11 +29,11 @@ if(isset($_SESSION["id"]))
 					<?php
 					$result = $dbh -> getCart($_SESSION["id"]);
 					foreach ($result as $product): ?>
-					<div class="row">
+					<div class="row text-center">
 						<input type="hidden" form="checkoutForm" name="id_prod[]" value="<?php echo $product["id"];?>">
 
 						<!-- TODO fix this div with responsive mobile (don't work with visible-xs, find a solution) -->
-						<div class="col-xs-4">
+						<div class="col-xs-12">
 							<?php
 							if(count(explode(";", $product["urlimage"])) > 1){
 								require_once("template_carouselproduct.php");
@@ -43,11 +43,11 @@ if(isset($_SESSION["id"]))
 								<img class="products-align hidden-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;">
 							<?php } ?>
 						</div>
-						<div class=" col-xs-4 text-center pull-right" style="float:right;">
+						<div class=" col-xs-12 text-center pull-right" style="float:right;">
 							<h4 class="product-name"><strong><?php echo $product["name"] ?></strong></h4>
 							<h4><small><?php echo $product["description"] ?></small></h4>
 						</div>
-						<div class="col-xs-6 hidden-xs " style="float:right; ">
+						<div class="col-xs-12 hidden-xs " style="float:right; ">
 							<div class="col-xs-6 text-right">
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
