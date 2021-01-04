@@ -68,14 +68,17 @@ foreach($result as $product):
           <h4><?php echo $product["price"] ?> €</h4>
             <div class="row text-center add-to-cart">
               <?php
-              if(isset($_SESSION["id"])){
+              if(!isset($_SESSION["id"])){
+                echo '<a href="login.php"><h4 class="text-center">Loggati per aggiungere il prodotto al carrello.</h4></a>';
+              }
+              else if($product["stock"] < 1){
+                echo '<h4 class="text-center">Il seguente prodotto è terminato.</h4>';
+              }
+              else{
                 echo '
                 <button  name="btn_add" id="btn_add" class="btn btn-info " '.$btn_add.'><span class="glyphicon glyphicon-plus">Add to Cart</span></button>
                 <button name="btn_drop" id="btn_remove" class="btn btn-info" '.$btn_drop.'><span class="glyphicon glyphicon-remove">Remove to Cart</span></button>
                 ';
-              }
-              else{
-                echo '<a href="login.php"><h4 class="text-center">Loggati per aggiungere il prodotto al carrello.</h4></a>';
               }
               ?>
             </div>
