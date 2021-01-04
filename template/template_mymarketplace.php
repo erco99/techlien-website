@@ -345,8 +345,12 @@ else{
       <div class="col-sm-12 form-text">
          <label for="categoryProduct_label">Choose a category:</label>
          <select name="categoryProduct" id="category" required>
-            <?php foreach ($dbh->getCategories() as $category) : ?>
-               <option value="<?php echo $category["id"]; ?>"><?php echo $category["name"]; ?></option>
+            <?php foreach ($dbh->getMacrocategories() as $macrocategory) :?>
+               <optgroup label="<?php echo $macrocategory["name"]?>">
+                  <?php foreach ($dbh->getCategoriesByMacro($macrocategory["id"]) as $category) : ?>
+                     <option value="<?php echo $category["id"]; ?>"><?php echo $category["name"]; ?></option>
+                  <?php endforeach; ?>
+               </optgroup>
             <?php endforeach; ?>
          </select>
       </div>
