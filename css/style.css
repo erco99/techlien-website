@@ -436,3 +436,24 @@ div#second > hr{
         padding: 40px 30px;
     }
 }
+
+.mymarket-products{
+    margin-right: 0;
+}
+
+.profile-style{
+    padding: 20px 0 60px;
+}
+
+.profile-style .btn{
+    background-color: #275903;
+    color: #ffffff;
+}
+
+.profile-style > .container > div:nth-child(2){
+    padding: 30px 0;
+}
+
+.profile-style > .container > div:nth-child(4){
+    padding: 10px 0 30px;
+}

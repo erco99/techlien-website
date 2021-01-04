@@ -85,7 +85,7 @@ else{
          <div class="visible-xs"  >
            <a name="myproduct_<?php echo $product["id"]; ?>"></a>
             <div class="container" id="mobilewatch-product_<?php echo $product["id"]; ?>">
-               <div class="row">
+               <div class="row mymarket-products">
                   <div class="table-responsive" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
 
                      <table class="table table-condensed">
@@ -135,13 +135,13 @@ else{
                                     <?php } ?>
                                  </div>
                               </td>
-                              <div class="col-xs-12 text-right">
-                                 <button id="btn_editproduct" class="btn btn-default btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
+                              <div class="col-xs-12 text-center">
+                                 <button id="btn_editproduct" class="btn btn-default btn-md" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                                     <span class="glyphicon glyphicon-pencil"></span> Edit product
                                  </button>
                                  <form method="POST">
                                     <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"></input>
-                                    <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
+                                    <button id="btn_editproduct" name="btn_remove" class="btn btn-default btn-md" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
                                        <span class="glyphicon glyphicon-pencil"></span> Remove product
                                     </button>
                                  </form>
@@ -306,11 +306,11 @@ else{
    }
 
    ?>
-
-   <button id="btn_addproduct" class="btn btn-default btn-lg" onclick="addProductToSell()">
-      <span class="glyphicon glyphicon-plus-sign"></span> Sell new product
-   </button>
-
+   <div class="row text-center">
+      <button id="btn_addproduct" class="btn btn-default btn-lg" onclick="addProductToSell()">
+         <span class="glyphicon glyphicon-plus-sign"></span> Sell new product
+      </button>
+   </div>
    <!-- CREATE A PRODUCT FORM (hidden default)-->
    <form id="form_addproduct" style="display:none;" action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" enctype="multipart/form-data">
       <div class="col-sm-12 form-text">
@@ -350,6 +350,7 @@ else{
             <?php endforeach; ?>
          </select>
       </div>
-
-      <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-upload"></span> SELL</button>
+      <div class="row text-center">
+         <button type="submit" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-upload"></span> SELL</button>
+      </div>
    </form>
