@@ -1,8 +1,19 @@
-/*CREA DATABASE*/
+
+/*LE SEGUENTI ISTRUZIONI PERMETTONO DI CREARE IL DATABASE VUOTO,
+QUINDI CON SOLE LE INFORMAZIONI DI DEFAULT (MACROCATEGORIE
+E CATEGORIE).
+SE SI VUOLE FARE UN TESTING COMPLETO DEL SITO, ANDARE SUL SITO
+E PROVA TUTTE LE FUNZIONALITÀ (REGISTRAZIONE, LOGIN, AGGIUNTA PRODOTTO,
+ACQUISTO PRODOTTO ECC...).
+I DATI VERRANNO AGGIUNTI DINAMICAMENTE SUL DATABASE*/
+
+/*ANDARE SUL PROPRIO DATABASE MANAGER E COPIARE
+LA SEGUENTE LINEA DI CODICE PER CREARE IL DATABASE*/
 
 CREATE DATABASE `dbwebsite`;
 
-/*CREA TABELLE*/
+/*ANDARE SU dbwebsite E COPIARE IL SEGUENTE CODICE
+PER LA CREAZIONE DELLE TABELLE*/
 CREATE TABLE `user`
 (
     `id` int(11) NOT NULL,
@@ -95,11 +106,7 @@ ALTER TABLE `orders`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 
-/*INSERIMENTO DEI VALORI RANDOM*/
-INSERT INTO `user`(`firstName`, `lastName`, `email`, `username`,`password`, `token`) VALUES
-("Giovanni", "Messina", "gio@gmail.com", "gio", "1234", 0),
-("Tizio", "A caso", "tizio@gmail.com", "tizio", "1234", 0),
-("Caio", "Rossi", "caio@gmail.com", "caio", "1234", 0);
+/*INSERIMENTO DEI VALORI DI DEFAULT*/
 
 INSERT INTO `macrocategory`(`name`) VALUES
 ("Hardware"),
@@ -119,8 +126,8 @@ INSERT INTO `category`(`name`, `idmacro`) VALUES
 ("Mouses", 1),
 ("Webcams", 1),
 ("Internal Components", 1),
-("Other", 1),
 ("Speakers", 1),
+("Other", 1),
 ("Operating Systems", 2),
 ("Antivirus", 2),
 ("Office SW", 2),
@@ -134,18 +141,3 @@ INSERT INTO `category`(`name`, `idmacro`) VALUES
 ("Cases", 3),
 ("Gaming accessories", 3),
 ("Other", 3);
-
-INSERT INTO `product`(`name`, `description`, `price`,`stock`, `urlimage`, `iduser`, `idcategory`) VALUES
-("prodotto1", "Questa è la descrizione del prodotto 1", 14.99, 100, "prova1.jpg", 1, 1),
-("prodotto2", "Questa è la descrizione del prodotto 2",9.50, 10, "prova2.png", 2, 2),
-("prodotto3", "Questa è la descrizione del prodotto 3",199.99, 50, "prova1.jpg",  1, 3);
-
-INSERT INTO `cart`(`iduser`, `idproduct`, `quantity`) VALUES
-(1,2,1),
-(2,1,1),
-(1,3,2);
-
-INSERT INTO `orders`(`idproduct`, `idbuyer`, `quantity`) VALUES
-(1,2,2),
-(1,3,1),
-(2,1,1);
