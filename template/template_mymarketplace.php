@@ -1,7 +1,7 @@
 <?php
 $order = $dbh -> getSelledProduct($_SESSION["id"]);
 if(empty($order)){
-  echo '<p class="form-title">You have selled  nothing yet :(</p>';
+  echo '<strong><p class="form-title" style="padding: 40px 0">You sold nothing yet</p></strong>';
 }
 elseif(isset($_POST["id_remove"]) && isset($_POST["btn_remove"])){
   $dbh -> removeProduct($_POST["id_remove"]);

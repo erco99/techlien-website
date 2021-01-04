@@ -1,5 +1,5 @@
 <div class="profile-style">
-  <h1 class="form-title"> PROFILE</h1>
+  <h1 class="form-title" style="padding: 20px 0 40px">Profile</h1>
   <div class="container">
     <div class="row text-center">
       <h2><?php echo $_SESSION["username"] ?></h2>

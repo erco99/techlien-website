@@ -1,7 +1,7 @@
 <?php
 $order = $dbh -> getOrders($_SESSION["id"]);
 if(empty($order)){
-  echo '<p class="form-title">You have no Order yet :(</p>';
+  echo '<strong><p class="form-title" style="padding: 40px 0">You have no order yet</p></strong>';
 }
 else {
   foreach ($order as $product) :
