@@ -63,9 +63,9 @@
                     <div class="form-title">
                       <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
                     </div>
-                </div> 
+                </div>
               </div>
-            </div>          
+            </div>
           </div>
         </form>
 

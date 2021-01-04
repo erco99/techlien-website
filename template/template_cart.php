@@ -39,20 +39,20 @@ if(isset($_SESSION["id"]))
 								require_once("template_carouselproduct.php");
 							}
 							else{ ?>
-								<img class=" visible-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:200px;">
-								<img class="products-align hidden-xs" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;">
+								<img class=" visible-xs"  alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:200px;" />
+								<img class="products-align hidden-xs"  alt="product image"src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;" />
 							<?php } ?>
 						</div>
 						<div class=" col-xs-12 text-center pull-right" style="float:right;">
 							<h4 class="product-name"><strong><?php echo $product["name"] ?></strong></h4>
-							<h4><small><?php echo $product["description"] ?></small></h4>
+							<h5><small><?php echo $product["description"] ?></small></h5>
 						</div>
 						<div class="col-xs-12 hidden-xs " style="float:right; ">
 							<div class="col-xs-6 text-right">
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
 							<div class="col-xs-4">
-								<input type="text" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>" />
+								<input type="text" title="quantity" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>" />
 							</div>
 							<div class="col-xs-2">
 								<div class="col-xs-12">
@@ -68,7 +68,7 @@ if(isset($_SESSION["id"]))
 								<h6><strong><?php echo $product["price"];?><span class="text-muted">x</span></strong></h6>
 							</div>
 							<div class="col-xs-4">
-								<input type="text" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
+								<input type="text" title="quantity" form="checkoutForm" name="quantity[]" class="form-control input-sm" value="<?php echo $product["quantity"] ?>">
 							</div>
 							<div class="col-xs-12">
 								<input type="hidden" form="trashForm" name="id_product" value="<?php echo $product["id"];?>">
