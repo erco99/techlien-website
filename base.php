@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/style.css">
 
         <title> TECHLIEN - An electronic e-commerce website</title>
-        <link rel="icon" type="image/png" href="localhost/unibowebsite/img/icons/favicon.ico"/>
+        <link rel="icon" type="image/png" href="/unibowebsite/img/icons/favicon.ico"/>
     </head>
     <body>
         <div class="container-fluid">
