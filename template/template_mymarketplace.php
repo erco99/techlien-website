@@ -116,23 +116,23 @@ else{
                         <h5><?php echo $product["description"] ?></h5>
                       </div>
                     </td>
-                        <td class="col-xs-12">
-                        <h4><strong>Total price</strong></h4>
-                      </td>
+                    <td class="col-xs-12">
+                      <h4><strong>Total price</strong></h4>
+                    </td>
 
-                      <td class="col-xs-12">
-                        <h5><?php echo $product["price"] ?> €</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="col-xs-4 form-title products-align">
-                        <?php	if(count(explode(";", $product["urlimage"])) > 1){
-                          require_once("template_carouselproduct.php");
-                        }
-                        else{ ?>
-                          <img alt="product image"  src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" width="100" height="100">
-                        <?php } ?>
-                      </td>
+                    <td class="col-xs-12">
+                      <h5><?php echo $product["price"] ?> €</h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-4 form-title products-align">
+                      <?php	if(count(explode(";", $product["urlimage"])) > 1){
+                        require_once("template_carouselproduct.php");
+                      }
+                      else{ ?>
+                        <img alt="product image"  src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" width="100" height="100">
+                      <?php } ?>
+                    </td>
                     <td class="col-xs-12 text-center">
                       <button id="mobilebtn_editproduct_<?php echo $product['id'] ?>" class="btn btn-default btn-md" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                         <span class="glyphicon glyphicon-pencil"></span> Edit product
@@ -145,110 +145,110 @@ else{
                       </form>
                     </td>
                   </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
 
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- EDIT PRODUCT -->
+    <!-- EDIT PRODUCT -->
 
 
-  <!-- DESKTOP EDIT VERSION -->
-  <div id="edit-product_<?php echo $product["id"]; ?>" style="display:none;">
+    <!-- DESKTOP EDIT VERSION -->
+    <div id="edit-product_<?php echo $product["id"]; ?>" style="display:none;">
 
-    <form action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" >
-      <input type="hidden" name="update" />
-      <input type="hidden" name="idtext" value="<?php echo $product["id"]; ?>" />
-      <div class="card col-lg-12 col-xs-12" style=" margin: 10px 10px; border-style: solid; border-color:grey;"  id="desktopedit-product_<?php echo $product["id"]; ?>">
-        <div class="panel-title">
+      <form action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" >
+        <input type="hidden" name="update" />
+        <input type="hidden" name="idtext" value="<?php echo $product["id"]; ?>" />
+        <div class="card col-lg-12 col-xs-12" style=" margin: 10px 10px; border-style: solid; border-color:grey;"  id="desktopedit-product_<?php echo $product["id"]; ?>">
+          <div class="panel-title">
+            <div class="row">
+              <div class="col-lg-4 col-xs-4 form-title">
+                <label for="stock_text_<?php echo $product["id"] ?>" ><strong>Quantity</strong></label>
+                <input type="text" name="stocktext" title="stock input" class="label-info form-control" id="stock_text_<?php echo $product["id"] ?>" value="<?php echo $product["stock"]; ?>" />
+              </div>
+              <div class="col-lg-4 col-xs-4 form-title">
+                <h3><strong>Order Number</strong></h3>
+                <h4><?php echo $product["id"]; ?></h4>
+              </div>
+              <div class="col-lg-4 col-xs-4 form-title">
+                <h3><strong># sold:</strong></h3>
+                <h4><?php echo $product["sold"]; ?></h4>
+              </div>
+            </div>
+          </div>
+          <div class="row" style=" margin: 10px 10px; border-style: solid; border-color:green;">
+            <div class="col-lg-2 col-xs-4 form-title">
+              <div class="products-align">
+                <?php	if(count(explode(";", $product["urlimage"])) > 1){
+                  require_once("template_carouselproduct.php");
+                }
+                else{ ?>
+                  <img alt="product image" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" >
+                <?php } ?>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xs-2 text-center" >
+              <input type="text" name="nametext" title="name input" style="width:150px;" class="label-info " id="name_text_<?php echo $product["id"] ?>" value="<?php echo $product["name"] ?>"/>
+              <textarea class="label-info inputbox" title="description input" style="width:150px;" name="descriptiontext" id="description_text_<?php echo $product["id"] ?>"><?php echo $product["description"] ?></textarea>
+            </div>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6"></div>
+
+            <div class="text-right">
+
+              <div class="col-xs-12" style="float: right;">
+                <h4><strong>Total price</strong></h4>
+              </div>
+              <div class="col-xs-6" style="float: right;">
+                <input type="text" name="pricetext" title="price input" class="label-info form-control" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" />
+              </div>
+              <div class="col-xs-12 text-right">
+                <button  type="button" class="btn btn-warning btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
+                  <span class="glyphicon glyphicon-remove-sign"></span> Cancel
+                </button>
+                <button type="submit" class="btn btn-success btn-md pull-right" >
+                  <span class="glyphicon glyphicon-ok"></span> Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <!-- MOBILE EDIT VERSION  -->
+      <form action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" >
+        <input type="hidden" name="update" />
+        <input type="hidden" name="idtext" value="<?php echo $product["id"]; ?>" />
+
+        <div class="container"  id="mobileedit-product_<?php echo $product["id"]; ?>" style="display:none; margin-top:10px;">
           <div class="row">
-            <div class="col-lg-4 col-xs-4 form-title">
-              <label for="stock_text_<?php echo $product["id"] ?>" ><strong>Quantity</strong></label>
-              <input type="text" name="stocktext" title="stock input" class="label-info form-control" id="stock_text_<?php echo $product["id"] ?>" value="<?php echo $product["stock"]; ?>" />
-            </div>
-            <div class="col-lg-4 col-xs-4 form-title">
-              <h3><strong>Order Number</strong></h3>
-              <h4><?php echo $product["id"]; ?></h4>
-            </div>
-            <div class="col-lg-4 col-xs-4 form-title">
-              <h3><strong># sold:</strong></h3>
-              <h4><?php echo $product["sold"]; ?></h4>
-            </div>
-          </div>
-        </div>
-        <div class="row" style=" margin: 10px 10px; border-style: solid; border-color:green;">
-          <div class="col-lg-2 col-xs-4 form-title">
-            <div class="products-align">
-              <?php	if(count(explode(";", $product["urlimage"])) > 1){
-                require_once("template_carouselproduct.php");
-              }
-              else{ ?>
-                <img alt="product image" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" >
-              <?php } ?>
-            </div>
-          </div>
-          <div class="col-lg-4 col-xs-2 text-center" >
-            <input type="text" name="nametext" title="name input" style="width:150px;" class="label-info " id="name_text_<?php echo $product["id"] ?>" value="<?php echo $product["name"] ?>"/>
-            <textarea class="label-info inputbox" title="description input" style="width:150px;" name="descriptiontext" id="description_text_<?php echo $product["id"] ?>"><?php echo $product["description"] ?></textarea>
-          </div>
-          <div class="col-lg-6"></div>
-          <div class="col-lg-6"></div>
+            <div class="col-sm-12 col-md-10 col-md-offset-1" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
 
-          <div class="text-right">
-
-            <div class="col-xs-12" style="float: right;">
-              <h4><strong>Total price</strong></h4>
-            </div>
-            <div class="col-xs-6" style="float: right;">
-              <input type="text" name="pricetext" title="price input" class="label-info form-control" id="price_text_<?php echo $product["id"] ?>" value="<?php echo $product["price"] ?>" />
-            </div>
-            <div class="col-xs-12 text-right">
-              <button  type="button" class="btn btn-warning btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
-                <span class="glyphicon glyphicon-remove-sign"></span> Cancel
-              </button>
-              <button type="submit" class="btn btn-success btn-md pull-right" >
-                <span class="glyphicon glyphicon-ok"></span> Confirm
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </form>
-
-    <!-- MOBILE EDIT VERSION  -->
-    <form action="<?php echo UTILS_DIR.'addProduct.php' ?>" method="POST" >
-      <input type="hidden" name="update" />
-      <input type="hidden" name="idtext" value="<?php echo $product["id"]; ?>" />
-
-      <div class="container"  id="mobileedit-product_<?php echo $product["id"]; ?>" style="display:none; margin-top:10px;">
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-md-offset-1" style=" margin: 10px 10px; border-style: solid; border-color:grey;">
-
-            <table class="table table-condensed">
-              <thead>
-                <tr>
-                  <th class="text-center" id="edit_orderquantity_<?php echo $product["id"]; ?>">Quantity</th>
-                  <th class="text-center" id="edit_ordersold_<?php echo $product["id"]; ?>"># Solded</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="col-sm-3 col-md-6 text-center" headers="edit_orderquantity_<?php echo $product["id"]; ?>">
-                    <input type="text" name="stocktext" title="stock input" class="form-control" value="<?php echo $product["stock"]; ?>"/>
-                  </td>
-                  <td class="col-sm-3 col-md-6 text-center" headers="edit_ordersold_<?php echo $product["id"]; ?>">
-                    <h5><?php echo $product["sold"]; ?></h5>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
+              <table class="table table-condensed">
+                <thead>
+                  <tr>
+                    <th class="text-center" id="edit_orderquantity_<?php echo $product["id"]; ?>">Quantity</th>
+                    <th class="text-center" id="edit_ordersold_<?php echo $product["id"]; ?>"># Solded</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-sm-3 col-md-6 text-center" headers="edit_orderquantity_<?php echo $product["id"]; ?>">
+                      <input type="text" name="stocktext" title="stock input" class="form-control" value="<?php echo $product["stock"]; ?>"/>
+                    </td>
+                    <td class="col-sm-3 col-md-6 text-center" headers="edit_ordersold_<?php echo $product["id"]; ?>">
+                      <h5><?php echo $product["sold"]; ?></h5>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
 
                     <td class="col-xs-12">
                       <input type="text" name="nametext" title="name product input" value="<?php echo $product["name"] ?>" class="form-control"/>
@@ -266,32 +266,32 @@ else{
                   </tr>
                   <tr>
                     <td class="col-xs-4 form-title products-align">
-                    <?php	if(count(explode(";", $product["urlimage"])) > 1){
+                      <?php	if(count(explode(";", $product["urlimage"])) > 1){
                         require_once("template_carouselproduct.php");
                       }
                       else{ ?>
                         <img alt="product image" src="<?php echo UPLOAD_DIR.$_SESSION["id"].'/'.$product["urlimage"] ?>" width="100" height="100">
                       <?php } ?>
                     </td>
-                  <td class="col-xs-12 text-right">
-                    <button  type="submit" id="btn_confirmproduct_<?php echo $product['id'] ?>" class="btn btn-default btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
-                      <span class="glyphicon glyphicon-pencil"></span> Confirm
-                    </button>
+                    <td class="col-xs-12 text-right">
+                      <button  type="submit" id="btn_confirmproduct_<?php echo $product['id'] ?>" class="btn btn-default btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
+                        <span class="glyphicon glyphicon-pencil"></span> Confirm
+                      </button>
                       <form name="subform" method="POST" >
-                      <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"/>
-                      <input type="submit" form="subform" id="btn_cancelproduct_<?php echo $product['id'] ?>" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
+                        <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"/>
+                        <input type="submit" form="subform" id="btn_cancelproduct_<?php echo $product['id'] ?>" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
                         <span class="glyphicon glyphicon-pencil"></span> Cancel
                       </button>
                     </form>
                   </td>
-              </tr>
-            </tbody>
-          </table>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
 
 <?php endforeach;
 }

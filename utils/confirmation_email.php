@@ -13,10 +13,10 @@ if(isset($_GET["email"]) && isset($_GET["token"]) ){
               <div class="icon-box">
                   <i class="material-icon"></i>
               </div>
-              <h4 class="modal-title">Email has been confirmed, welcome!</h4>
+              <h4 class="modal-title">Email has been confirmed, Welcome!</h4>
           </div>
           <div class="modal-body">
-              <p class="text-center">In 5 sec will be redirect in home.</p>
+              <p class="text-center">In 5 sec will be redirect in Home.</p>
           </div>
       </div>
   </div>
