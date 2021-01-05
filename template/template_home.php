@@ -42,7 +42,7 @@
 <div class="row">
     <div class="col-xs-12 col-sm-6 product-spacing product-padding-home">
         <div class="products-align">
-            <img src="<?php echo "img/UPLOAD/".$product[$i]["idseller"]."/".$product[$i]["urlimage"] ?>" alt="home_image">
+            <img src="<?php echo "img/UPLOAD/".$product[$i]["idseller"]."/".$product[$i]["urlimage"] ?>" alt="home product image">
           <a href="/unibowebsite/product.php?id=<?php echo $product[$i]["id"]?>"  ><h4><strong><?php echo $product[$i]["name"]?></strong></h4></a>
             <h5>€<?php echo $product[$i]["price"]?></h5>
         </div>
@@ -51,7 +51,7 @@
         {
             echo '<div class="col-xs-12 col-sm-6 product-spacing product-padding-home">
                 <div class="products-align">
-                <img src="img/UPLOAD/'.$product[$i+1]["idseller"].'/'.$product[$i+1]["urlimage"].'" alt="home_image">
+                <img src="img/UPLOAD/'.$product[$i+1]["idseller"].'/'.$product[$i+1]["urlimage"].'" alt="home product image">
                      <a href="/unibowebsite/product.php?id='.$product[$i+1]["id"].'"  ><h4><strong>'.$product[$i+1]["name"].'</strong></h4></a>
                     <h5>€'.$product[$i+1]["price"].'</h5>
                 </div>

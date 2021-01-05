@@ -186,7 +186,7 @@
                     <p><a href="story.php">The story</a></p>
                 </div>
                 <div class="row last-row">
-                    <h6>© Designed and created by Giovanni Messina and Francesco Ercolani</h6>
+                    <h4>© Designed and created by Giovanni Messina and Francesco Ercolani</h4>
                 </div>
             </footer>
         </div>
