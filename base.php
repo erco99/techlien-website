@@ -26,7 +26,7 @@
                                 }
                                 else{
                                     echo '<a href="login.php">Login</a>
-                                    &nbsp-&nbsp
+                                    &nbsp;-&nbsp;
                                     <a href="login.php?create_account">Create account</a>';
                                 }
                                 ?>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="row visible-xs mobile-banner">
-                    <h7>Advanced electronic marketplace</h7>
+                    <h6>Advanced electronic marketplace</h6>
                 </div>
                 <div class="row row-full-height visible-xs home-mobile">
 
@@ -76,51 +76,52 @@
 
                 <div class="row visible-xs text-center menu-options">
                     <div id="first" class="collapse">
-                    <div class="row">
-                        <?php
-                        if(isset($_SESSION["id"])){
-                            echo '<a href="profile.php"><h4>'.$_SESSION["username"].'</h4></a>';
-                        }
-                        else{
-                            echo '<a href="profile.php"><h4>Account</h4></a>';
-                        }
-                        ?>
+                        <div class="row">
+                            <?php
+                            if(isset($_SESSION["id"])){
+                                echo '<a href="profile.php"><h4>'.$_SESSION["username"].'</h4></a>';
+                            }
+                            else{
+                                echo '<a href="profile.php"><h4>Account</h4></a>';
+                            }
+                            ?>
 
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <a href="shop.php"><h4>Shop</h4></a>
-                        <a href="#" data-toggle="collapse" data-target="#second"><h4 id="plus">+</h4></a>
-                        <div id="second" class="collapse">
-                            <?php $templateParams["macrocategories"    ] = $dbh->getMacrocategories(); ?>
-                            <?php foreach($templateParams["macrocategories"] as $macrocategory) : ?>
-                                <?php $macro = $macrocategory["id"];
-                                $templateParams["categories"] = $dbh->getCategoriesByMacro($macro);
-                                ?>
-                                <h5>
-                                    <strong><?php echo $macrocategory["name"]; ?></strong>
-                                </h5>
-                                <?php foreach($templateParams["categories"] as $category): ?>
-                                    <p>
-                                        <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"];?>&categoryid=<?php echo $category["id"] ;?>">
-                                            <?php echo $category["name"];?>
-                                        </a>
-                                    </p>
-                                <?php endforeach; ?>
-                                <?php $i++;
-                                if($i != 3){ echo "<hr/>"; } ?>
-                            <?php endforeach; ?>
                         </div>
+                        <hr/>
+                        <div class="row">
+                            <a href="shop.php"><h4>Shop</h4></a>
+                            <a href="#" data-toggle="collapse" data-target="#second"><h4 id="plus">+</h4></a>
+                            <div id="second" class="collapse">
+                                <?php $templateParams["macrocategories"    ] = $dbh->getMacrocategories(); ?>
+                                <?php foreach($templateParams["macrocategories"] as $macrocategory) : ?>
+                                    <?php $macro = $macrocategory["id"];
+                                    $templateParams["categories"] = $dbh->getCategoriesByMacro($macro);
+                                    ?>
+                                    <h5>
+                                        <strong><?php echo $macrocategory["name"]; ?></strong>
+                                    </h5>
+                                    <?php foreach($templateParams["categories"] as $category): ?>
+                                        <p>
+                                            <a href="shop.php?macrocategoryid=<?php echo $macrocategory["id"];?>&categoryid=<?php echo $category["id"] ;?>">
+                                                <?php echo $category["name"];?>
+                                            </a>
+                                        </p>
+                                    <?php endforeach; ?>
+                                    <?php $i++;
+                                    if($i != 3){ echo "<hr/>"; } ?>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <a href="contact.php"><h4>Contact</h4></a>
+                        </div>
+                        <?php
+                            if(isset($_SESSION["id"])){
+                                echo '<hr/><div class="row"> <a href="login.php?logout"><h4>Logout</h4></a></div>';
+                            }
+                        ?>
                     </div>
-                    <hr/>
-                    <div class="row">
-                        <a href="contact.php"><h4>Contact</h4></a>
-                    </div>
-                    <?php
-                        if(isset($_SESSION["id"])){
-                            echo '<hr/><div class="row"> <a href="login.php?logout"><h4>Logout</h4></a></div>';
-                        }
-                    ?>
                 </div>
             </header>
 
@@ -180,12 +181,12 @@
                     <p><a href="contact.php">Contact us</a></p>
                     <p><a href="about.php">About us</a></p>
                     <p><a href="techinfo.php">Technical information</a></p>
-                    <hr width="15%">
+                    <hr>
                     <h3><strong>Altro</strong></h3>
                     <p><a href="story.php">The story</a></p>
                 </div>
                 <div class="row last-row">
-                    <h7>© Designed and created by Giovanni Messina and Francesco Ercolani</h7>
+                    <h6>© Designed and created by Giovanni Messina and Francesco Ercolani</h6>
                 </div>
             </footer>
         </div>

@@ -119,6 +119,10 @@ body {
     color: white;
 }
 
+.footer-sm-style > hr{
+    width: 25%;
+}
+
 .home-subtitle{
     font-size: 35px;
     font-weight: normal;
@@ -249,7 +253,7 @@ div#second > hr{
     position: relative;
     background-color: black;
 }
-.mobile-banner h7 {
+.mobile-banner h6 {
     color: rgb(211, 202, 202);
     position: absolute;
     width: 100%;
