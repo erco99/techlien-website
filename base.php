@@ -5,13 +5,13 @@
         <meta name="description" content="Initial description">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- Bootstrap css -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <!-- Personal customized css -->
         <link rel="stylesheet" href="css/style.css">
 
         <title> TECHLIEN - An electronic e-commerce website</title>
+        <link rel="icon" type="image/png" href="localhost/unibowebsite/img/icons/favicon.ico"/>
     </head>
     <body>
         <div class="container-fluid">
