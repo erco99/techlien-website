@@ -13,10 +13,10 @@ if(isset($_GET["email"]) && isset($_GET["token"]) ){
               <div class="icon-box">
                   <i class="material-icon"></i>
               </div>
-              <h4 class="modal-title">Email confermata, benvenuto!</h4>
+              <h4 class="modal-title">Email has been confirmed, welcome!</h4>
           </div>
           <div class="modal-body">
-              <p class="text-center">Tra 5 secondi sarai reindirizzato alla pagina principale.</p>
+              <p class="text-center">In 5 sec will be redirect in home.</p>
           </div>
       </div>
   </div>
@@ -51,8 +51,8 @@ function send_emailConfirm($firstName, $lastName, $email, $username, $password){
 
 
   //From email address and name
-  $mail->From = "UniboWebsite@email.com";
-  $mail->FromName = "STAFF UniboWebsite";
+  $mail->From = "TECHLIEN@staff.com";
+  $mail->FromName = "STAFF TECHLIEN";
 
   //To address and name
   $mail->addAddress($email, $username);
@@ -61,18 +61,18 @@ function send_emailConfirm($firstName, $lastName, $email, $username, $password){
   //$mail->addReplyTo("reply@yourdomain.com", "Reply");
 
 
-  $mail->Subject = "Confirm Mail Website";
+  $mail->Subject = "Confirm Mail TECHLIEN";
   $mail->Body = '
   <html>
     <body>
       <p>Caro '.$firstName.' '.$lastName.' (oppure dovremmo chiamarti '.$username.')</p>
-      <p> Benvenuto, 
-          <a href="localhost/unibowebsite/utils/confirmation_email.php?email='.$email.'&token='.$token.'">Cliccando qui</a>
-          confermi la registrazione al sito Website.com
+      <p> Benvenuto,
+          <a href="localhost/unibowebsite/utils/confirmation_email.php?email='.$email.'&token='.$token.'">Click here</a>
+          and confirm registration to TECHLIEN
       </p>
     </body>
   </html>';
-  $mail->AltBody = "Conferma registrazione al sito Website.com";
+  $mail->AltBody = "Confirm registration to TECHLIEN";
   //Send HTML or Plain Text email
   $mail->isHTML(true);
 

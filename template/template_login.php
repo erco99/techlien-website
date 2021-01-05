@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="row text-center">
-            <a href="#">Forgot your password?</a>
+            <a href="password_recovery.php">Forgot your password?</a>
           </div>
           <div class="row text-center hidden-xs">
             <a href="login.php?create_account">Not registered yet? Click here.</a>

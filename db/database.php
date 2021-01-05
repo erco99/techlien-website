@@ -47,6 +47,25 @@ class DatabaseHelper{
     return $result;
   }
 
+  public function getUserFromEmail($email){
+    $stmt = $this->db->prepare("SELECT username, email FROM user where email= ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
+    return $result;
+  }
+
+  public function setPassword($email, $password){
+    $stmt = $this->db->prepare("UPDATE `user` SET password=? WHERE email= ?");
+    $crypt = crypt($password, $this->salt);
+    $stmt->bind_param("ss", $crypt, $email);
+    $stmt->execute();
+    $stmt->close();
+  }
+
 
   public function checkExistingEmail($email){
     $stmt = $this->db->prepare("SELECT * FROM `user` where email=?");

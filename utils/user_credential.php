@@ -2,12 +2,21 @@
 
 require_once "../boot.php";
 
+//recovery password
+if(isset($_POST["recovery_pass"])){
+  $dbh -> setPassword($_POST["email"], $_POST["password"]);
+  echo '<p>Password setted. Re-welcome :)</p>';
+  header("Location:/unibowebsite/login.php");
+
+}
+
+
 // login form called this .php
 if(isset($_POST["login"])){
   $user = $dbh -> login($_POST["email"], $_POST["password"] );
   if(empty($user)){
     ?>
-    <p>Password is incorrect or you are registered yet</p>
+    <p>Password is incorrect or you aren't registered yet</p>
     <a href="../login.php?create_account">Non sei ancora registrato? Clicca qui.</a>
     <?php
   }
