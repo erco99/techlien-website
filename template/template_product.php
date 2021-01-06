@@ -69,7 +69,7 @@
               <div class="row text-center add-to-cart">
                 <?php
                 if(!isset($_SESSION["id"])){
-                  echo '<a href="login.php"><h4 class="text-center">Loggati per aggiungere il prodotto al carrello.</h4></a>';
+                  echo '<a href="login.php"><h4 class="text-center">Log in to add the product to the cart.</h4></a>';
                 }
                 else if($product["stock"] < 1){
                   echo '<h4 class="text-center">Il seguente prodotto è terminato.</h4>';
