@@ -1,8 +1,8 @@
 <div class="row text-center">
-  <h2>Shop</h2>
+  <h3><strong>Shop</strong></h3>
 </div>
 <div class="row hidden-xs">
-  <ul class="nav nav-pills nav-justified shop-nav">
+  <div class="nav nav-pills nav-justified shop-nav">
     <div class="row row-adjust">
       <?php foreach($templateParams["macrocategories"] as $macrocategory) : ?>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#<?php echo $macrocategory["name"];?>" aria-expanded="false" aria-controls="<?php echo $macrocategory["name"];?>">
@@ -29,7 +29,7 @@
         </div>
       </div>
     <?php endforeach; ?>
-  </ul>
+  </div>
 </div>
 
 <?php for($i = 0; $i < $limit; $i = $i + 3):?>
