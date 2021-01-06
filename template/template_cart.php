@@ -40,7 +40,7 @@ if(isset($_SESSION["id"]))
 							}
 							else{ ?>
 								<img class=" visible-xs"  alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:200px;" />
-								<img class="products-align hidden-xs"  alt="product image"src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;" />
+								<img class="products-align hidden-xs"  alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"]."/".$product["urlimage"]; ?>" style="max-width:300px;" />
 							<?php } ?>
 						</div>
 						<div class=" col-xs-12 text-center pull-right" style="float:right;">

@@ -32,7 +32,7 @@ else {
                 require_once("template_carouselproduct.php");
               }
               else{ ?>
-                <img alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" class="img-thumbnail" />
+                <img alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>"  class="img-thumbnail" />
               <?php } ?>
             </div>
           </div>
@@ -84,12 +84,14 @@ else {
                 </tr>
               </thead>
               <tbody>
-                <td class="col-sm-3 col-md-6 text-center" headers="orderdateth_<?php echo $product["idorder"] ?>">
-                  <h5><?php echo date("d/M/y",strtotime($product["orderdate"])); ?></h5>
-                </td>
-                <td class="col-sm-8 col-md-6 text-center" headers="ordernumberth_<?php echo $product["idorder"] ?>">
-                  <h5><?php echo $product["idorder"]; ?></h5>
-                </td>
+                <tr>
+                  <td class="col-sm-3 col-md-6 text-center" headers="orderdateth_<?php echo $product["idorder"] ?>">
+                    <h5><?php echo date("d/M/y",strtotime($product["orderdate"])); ?></h5>
+                  </td>
+                  <td class="col-sm-8 col-md-6 text-center" headers="ordernumberth_<?php echo $product["idorder"] ?>">
+                    <h5><?php echo $product["idorder"]; ?></h5>
+                  </td>
+                </tr>
 
               </tbody>
               <tbody>
@@ -100,7 +102,7 @@ else {
                         require_once("template_carouselproduct.php");
                       }
                       else{ ?>
-                        <img alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>" alt="" width="100" height="100" />
+                        <img alt="product image" src="<?php echo UPLOAD_DIR.$product["iduser"].'/'.$product["urlimage"] ?>"  width="100" height="100" />
                       <?php } ?>
                     </div>
                   </td>
@@ -115,6 +117,7 @@ else {
                   </td>
                 </tr>
                 <tr>
+                  <td></td>
                   <td class="col-xs-2 pull-right">
 
                     <div class="col-xs-12">
@@ -123,6 +126,11 @@ else {
                     <div class="col-xs-12">
                       <h6><?php echo empty($product["tracknumber"]) ? 'NO TRACKING NUMBER' : $product["tracknumber"]; ?></h6>
                     </div>
+                  </td>
+                </tr>
+                <tr>
+
+                  <td class="col-xs-2 pull-right">
 
                     <div class="col-xs-12">
                       <h4><strong>Total price</strong></h4>
@@ -132,15 +140,16 @@ else {
                       <h5><?php echo $product["price"] ?> €</h5>
                     </div>
                   </td>
+                  <td></td>
                 </tr>
-              </div>
-            </div>
-          </tbody>
-        </table>
-      </div>
-    </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
+      <?php endforeach;
+    }
+    ?>
 
-  <?php endforeach;
-}
-?>
+  </div>
+</div>

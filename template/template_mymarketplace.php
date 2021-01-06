@@ -1,7 +1,7 @@
 <?php
 $order = $dbh -> getSelledProduct($_SESSION["id"]);
 if(empty($order)){
-  echo '<strong><p class="form-title" style="padding: 40px 0">You sold nothing yet</p></strong>';
+  echo '<p class="form-title" style="padding: 40px 0"><strong>You sold nothing yet</strong></p>';
 }
 elseif(isset($_POST["id_remove"]) && isset($_POST["btn_remove"])){
   $dbh -> removeProduct($_POST["id_remove"]);
@@ -107,7 +107,7 @@ else{
                 </tbody>
                 <tbody>
                   <tr>
-                    <td class="col-xs-4 text-left">
+                    <td class="col-xs-4 text-left" colspan="2">
 
                       <div class="col-xs-12">
                         <h5><a href="<?php echo $prod_page; ?>"><strong><?php echo $product["name"] ?></strong></a></h5>
@@ -116,7 +116,9 @@ else{
                         <h5><?php echo $product["description"] ?></h5>
                       </div>
                     </td>
-                    <td class="col-xs-12">
+                  </tr>
+                  <tr>
+                    <td class="col-xs-12" colspan="1">
                       <h4><strong>Total price</strong></h4>
                     </td>
 
@@ -256,6 +258,8 @@ else{
                     <td class="col-xs-12">
                       <input type="text" class="inputbox" name="descriptiontext" title="description product input" value="<?php echo $product["description"] ?>"/>
                     </td>
+                  </tr>
+                  <tr>
                     <td class="col-xs-12">
                       <h4><strong>Total price</strong></h4>
                     </td>
@@ -265,7 +269,7 @@ else{
                     </td>
                   </tr>
                   <tr>
-                    <td class="col-xs-4 form-title products-align">
+                    <td class="col-xs-4 form-title products-align" >
                       <?php	if(count(explode(";", $product["urlimage"])) > 1){
                         require_once("template_carouselproduct.php");
                       }
@@ -277,23 +281,25 @@ else{
                       <button  type="submit" id="btn_confirmproduct_<?php echo $product['id'] ?>" class="btn btn-default btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
                         <span class="glyphicon glyphicon-pencil"></span> Confirm
                       </button>
-                      <form name="subform" method="POST" >
-                        <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"/>
-                        <button form="subform" id="btn_cancelproduct_<?php echo $product['id'] ?>" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
-                        <span class="glyphicon glyphicon-pencil"></span> Cancel
-                      </button>
-                    </form>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                      <div class="col-xs-12 text-right">
+                        <button  type="button" class="btn btn-warning btn-md pull-left" onclick="editProductToSell( <?php echo $product['id'] ?>)">
+                          <span class="glyphicon glyphicon-remove-sign"></span> Cancel
+                        </button>
+                        <button type="submit" class="btn btn-success btn-md pull-right" >
+                          <span class="glyphicon glyphicon-ok"></span> Confirm
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
-<?php endforeach;
+  <?php endforeach;
 }
 
 ?>
@@ -335,7 +341,7 @@ else{
 
   <div class="col-sm-12 form-text">
     <label for="category">Choose a category:</label>
-    <select name="categoryProduct" id="category" title="select category of product" required>
+    <select name="categoryProduct" id="category" title="select category of product">
       <?php foreach ($dbh->getMacrocategories() as $macrocategory) :?>
         <optgroup label="<?php echo $macrocategory["name"]?>">
           <?php foreach ($dbh->getCategoriesByMacro($macrocategory["id"]) as $category) : ?>

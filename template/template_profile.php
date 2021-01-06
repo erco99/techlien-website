@@ -14,40 +14,40 @@
       </div>
     </div>
     <div class="row text-center">
-        <label><?php echo $_SESSION["email"] ?></label>
+      <label><?php echo $_SESSION["email"] ?></label>
     </div>
 
     <?php if(isset($_GET["order"])) { ?>
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">My Order
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/unibowebsite/profile.php">My Marketplace</a></li>
-            </ul>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">My Order
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="/unibowebsite/profile.php">My Marketplace</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
         <?php
         require("template_myorder.php");
+      }
+      else{
+        ?>
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #275903;">My Marketplace
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="/unibowebsite/profile.php?order">My Order</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <?php
+          require("template_mymarketplace.php");
         }
-        else{
-      ?>
-    <div class="row">
-      <div class="col-xs-4">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #275903;">My Marketplace
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a href="/unibowebsite/profile.php?order">My Order</a></li>
-            </ul>
-        </div>
+        ?>
       </div>
     </div>
-      <?php
-      require("template_mymarketplace.php");
-      }
-      ?>
-  </div>
-</div>
