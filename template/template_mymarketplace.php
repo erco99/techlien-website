@@ -279,7 +279,7 @@ else{
                       </button>
                       <form name="subform" method="POST" >
                         <input type="hidden" name="id_remove" value="<?php echo $product["id"]; ?>"/>
-                        <input type="submit" form="subform" id="btn_cancelproduct_<?php echo $product['id'] ?>" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
+                        <button form="subform" id="btn_cancelproduct_<?php echo $product['id'] ?>" name="btn_remove" class="btn btn-default btn-md pull-right" onclick="removeProductToSell( <?php echo $product['id'] ?>)">
                         <span class="glyphicon glyphicon-pencil"></span> Cancel
                       </button>
                     </form>

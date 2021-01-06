@@ -107,7 +107,8 @@
                                             </a>
                                         </p>
                                     <?php endforeach; ?>
-                                    <?php $i++;
+                                    <?php $i=0; 
+                                    $i++;
                                     if($i != 3){ echo "<hr/>"; } ?>
                                 <?php endforeach; ?>
                             </div>
