@@ -51,8 +51,8 @@
             </div>
             <div class="form-group centered">
               <div class="col-sm-12 form-text register-buttons">
-                <button type="submit" class="btn btn-primary hidden-xs enter-desktop">Sign up</button>
-                <button type="submit" class="btn btn-primary visible-xs enter-mobile">Sign up</button>
+                <button type="submit" class="btn btn-primary hidden-xs enter-desktop status">Sign up</button>
+                <button type="submit" class="btn btn-primary visible-xs status">Sign up</button>
               </div>
               <div class="hidden-xs">
                 <div class="row text-center"><a href="login.php">Already registered? Click here.</a></div>
@@ -61,7 +61,7 @@
                 <div class="form-title">
                   <h3 >Are you already registered to Techlien ?</h3>
                     <div class="form-title">
-                      <input type="button" value="Login"  onclick="window.location='login.php';" class=" btn btn-success" />
+                      <input type="button" value="Login"  onclick="window.location='login.php';" class="btn btn-success" />
                     </div>
                 </div>
               </div>

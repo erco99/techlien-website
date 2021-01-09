@@ -1,18 +1,15 @@
-
-
-//DOM READY???
-
 function compareEmail(){
   const reEmail = document.getElementById('inputRepeatEmail');
   const email = document.getElementById('inputEmail');
   if(email.value != "" && email.value == reEmail.value ){
-    $('#repeatEmailHelp').text('Email coincidono');
-    document.getElementById('repeatEmailHelp').style.color = 'green';
-
+    $('#RepeatEmail').text('Email coincidono');
+    document.getElementById('RepeatEmail').style.color = 'green';
+    $('button.status').prop('disabled', false);
   }
   else{
-    $('#repeatEmailHelp').text('Email non coincidono');
-    document.getElementById('repeatEmailHelp').style.color = 'red';
+    $('#RepeatEmail').text('Email non coincidono');
+    document.getElementById('RepeatEmail').style.color = 'red';
+    $('button.status').prop('disabled', true);
   }
 }
 
@@ -20,12 +17,13 @@ function comparePassword(){
   const rePassword = document.getElementById('inputRepeatPassword');
   const password = document.getElementById('inputPassword');
   if(password.value != "" && password.value == rePassword.value){
-    $('#repeatPasswordHelp').text('Le password coincidono');
-    document.getElementById('repeatPasswordHelp').style.color = 'green';
-
+    $('#RepeatPassword').text('Le password coincidono');
+    document.getElementById('RepeatPassword').style.color = 'green';
+    $('button.status').prop('disabled', false);
   }
   else{
-    $('#repeatPasswordHelp').text('Le password non coincidono');
-    document.getElementById('repeatPasswordHelp').style.color = 'red';
+    $('#RepeatPassword').text('Le password non coincidono');
+    document.getElementById('RepeatPassword').style.color = 'red';
+    $('button.status').prop('disabled', true);
   }
 }
